@@ -20,10 +20,12 @@
     "vue"
   ],
   "dependencies": {
-    "vue": "^2.1.0",
     "ag-grid": "7.2.x",
     "ag-grid-enterprise": "7.2.x",
     "ag-grid-vue": "file:../ag-grid-vue",
+
+    "vue": "^2.1.0",
+    "vue-router": "^2.1.0",
 
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
@@ -35,7 +37,10 @@
     "vue-loader": "^10.0.0",
     "vue-template-compiler": "^2.1.0",
     "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack-dev-server": "^2.2.0",
+
+    "bootstrap": "3.3.6",
+    "jquery": "3.1.1"
   }
 }
 
