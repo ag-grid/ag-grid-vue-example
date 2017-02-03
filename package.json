@@ -22,7 +22,7 @@
   "dependencies": {
     "ag-grid": "7.2.x",
     "ag-grid-enterprise": "7.2.x",
-    "ag-grid-vue": "file:../ag-grid-vue",
+    "ag-grid-vue": "0.0.1-beta.2",
 
     "vue": "^2.1.0",
     "vue-router": "^2.1.0",
