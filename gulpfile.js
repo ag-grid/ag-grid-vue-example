@@ -2,6 +2,16 @@ const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const del = require('del');
 
+gulp.task('copy-to-ag-docs', ['copy-to-docs'], (callback) => {
+    return gulp.src(['./docs/**/*'], {base: './docs'})
+        .pipe(gulp.dest('../ag-grid-docs/src/vue-examples'));
+});
+
+gulp.task("copy-to-docs", function (callback) {
+    return gulp.src(['./src/**/*', './dist/**/*', './images/**/*'], {base: './'})
+        .pipe(gulp.dest('./docs'));
+});
+
 gulp.task('clean-nm-ag-grid', () => {
     return del(['node_modules/ag-grid', '!node_modules']);
 });
