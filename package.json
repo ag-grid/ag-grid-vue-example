@@ -23,10 +23,8 @@
     "ag-grid": "7.2.x",
     "ag-grid-enterprise": "7.2.x",
     "ag-grid-vue": "0.0.1-beta.2",
-
     "vue": "^2.1.0",
     "vue-router": "^2.1.0",
-
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-preset-es2015": "^6.0.0",
@@ -38,9 +36,12 @@
     "vue-template-compiler": "^2.1.0",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0",
-
     "bootstrap": "3.3.6",
     "jquery": "3.1.1"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "run-sequence": "^1.2.2"
   }
 }
-
