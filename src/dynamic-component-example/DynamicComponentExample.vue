@@ -50,9 +50,9 @@
                 }
             },
             ChildMessageComponent: {
-                template: '<span><button style="height: 20px" @click="inokeParentMethod">Invoke Parent</button></span>',
+                template: '<span><button style="height: 20px" @click="invokeParentMethod">Invoke Parent</button></span>',
                 methods: {
-                    inokeParentMethod() {
+                    invokeParentMethod() {
                         this.params.context.componentParent.methodFromParent(`Row: ${this.params.node.rowIndex}, Col: ${this.params.colDef.headerName}`)
                     }
                 }
