@@ -1,7 +1,7 @@
 {
   "name": "ag-grid-vue-example",
   "description": "ag-Grid Vue Examples",
-  "version": "0.0.1-beta.2",
+  "version": "8.0.0",
   "author": "Sean Landsman <sean@thelandsmans.com>",
   "license": "MIT",
   "bugs": {
@@ -21,9 +21,9 @@
     "vue"
   ],
   "dependencies": {
-    "ag-grid": "7.2.x",
-    "ag-grid-enterprise": "7.2.x",
-    "ag-grid-vue": "0.0.1-beta.2",
+    "ag-grid": "8.0.x",
+    "ag-grid-enterprise": "8.0.x",
+    "ag-grid-vue": "8.0.x",
     "vue": "^2.1.0",
     "vue-router": "^2.1.0",
     "babel-core": "^6.0.0",
