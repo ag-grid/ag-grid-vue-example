@@ -83,7 +83,9 @@
             this.$refs.detail.$el.addEventListener('mousewheel', this.consumeMouseWheelOnDetailGrid)
         },
         destroyed() {
-            this.$refs.detail.$el.removeEventListener('mousewheel', this.consumeMouseWheelOnDetailGrid)
+            if(this.$refs.detail) {
+                this.$refs.detail.$el.removeEventListener('mousewheel', this.consumeMouseWheelOnDetailGrid)
+            }
         }
     })
 </script>
