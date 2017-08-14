@@ -5,9 +5,9 @@
   "author": "Sean Landsman <sean@thelandsmans.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ceolter/ag-grid-vue-example/issues"
+    "url": "https://github.com/ag-grid/ag-grid-vue-example/issues"
   },
-  "homepage": "https://github.com/ceolter/ag-grid-vue-example#readme",
+  "homepage": "https://github.com/ag-grid/ag-grid-vue-example#readme",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",

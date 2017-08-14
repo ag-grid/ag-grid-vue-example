@@ -16,7 +16,7 @@ npm run build
 
 ## Examples
 
-See the [https://github.com/ceolter/ag-grid-vue-example](https://github.com/ceolter/ag-grid-vue-example) for full 
+See the [https://github.com/ag-grid/ag-grid-vue-example](https://github.com/ag-grid/ag-grid-vue-example) for full 
 working examples of what you can do with ag-Grid and VueJS Components.
 
 Examples included are:
