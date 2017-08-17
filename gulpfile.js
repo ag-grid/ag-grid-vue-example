@@ -4,7 +4,7 @@ const del = require('del');
 
 gulp.task('copy-to-ag-docs', ['copy-to-docs'], (callback) => {
     return gulp.src(['./docs/**/*'], {base: './docs'})
-        .pipe(gulp.dest('../ag-grid-docs/src/vue-examples'));
+        .pipe(gulp.dest('../ag-grid-docs/src/framework-examples/vue-examples'));
 });
 
 gulp.task("copy-to-docs", function (callback) {
