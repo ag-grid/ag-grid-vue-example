@@ -4,8 +4,12 @@ import "../node_modules/ag-grid/dist/styles/ag-grid.css";
 import "../node_modules/ag-grid/dist/styles/theme-fresh.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-// need if you use ag-grid enterprise features
+// only needed if you use ag-grid enterprise features
 import "ag-grid-enterprise/main";
+
+// only needed if you use ag-grid enterprise features
+// import {LicenseManager} from "ag-grid-enterprise/main";
+// LicenseManager.setLicenseKey("your license key");
 
 import RichGridExample from "./rich-grid-example/RichGridExample.vue";
 import DynamicComponentExample from "./dynamic-component-example/DynamicComponentExample.vue";

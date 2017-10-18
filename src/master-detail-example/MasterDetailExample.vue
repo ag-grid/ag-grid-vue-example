@@ -9,8 +9,7 @@
                      :fullWidthCellRendererFramework="getFullWidthCellRenderer()"
 
                      :enableSorting="true"
-                     :enableColResize="true"
-                     :suppressMenuFilterPanel="true">
+                     :enableColResize="true">
         </ag-grid-vue>
     </div>
 </template>
@@ -134,9 +133,14 @@
             }
         },
         beforeMount() {
-            this.gridOptions = {};
-            this.gridOptions.rowData = this.createRowData();
-            this.gridOptions.columnDefs = this.createColumnDefs();
+            this.gridOptions = {
+                rowData: this.createRowData(),
+                columnDefs: this.createColumnDefs(),
+                defaultColDef: {
+                    // hide thef filter panel
+                    menuTabs: ['generalMenuTab', 'columnsMenuTab']
+                }
+            };
         },
         mounted() {
             this.gridOptions.api.sizeColumnsToFit();
