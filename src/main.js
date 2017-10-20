@@ -20,6 +20,7 @@ import FullWidthRowExample from "./full-width-example/FullWidthExample.vue";
 import GroupedRowExample from "./grouped-row-example/GroupedRowExample.vue";
 import FilterExample from "./filter-example/FilterExample.vue";
 import MasterDetailExample from "./master-detail-example/MasterDetailExample.vue";
+import LargeDataSetExample from "./large-data-set-example/LargeDataSetExample.vue";
 
 Vue.use(VueRouter);
 
@@ -32,7 +33,8 @@ const routes = [
     {path: '/full-width', component: FullWidthRowExample, name: "Full Width Row Example"},
     {path: '/grouped-row', component: GroupedRowExample, name: "Grouped Row Example"},
     {path: '/filter', component: FilterExample, name: "Filter Example"},
-    {path: '/master-detail', component: MasterDetailExample, name: "Master Detail Example"}
+    {path: '/master-detail', component: MasterDetailExample, name: "Master Detail Example"},
+    {path: '/large-data', component: LargeDataSetExample, name: "Large Data Example"}
 ];
 
 const router = new VueRouter({

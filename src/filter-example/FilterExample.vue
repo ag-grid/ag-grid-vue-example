@@ -1,7 +1,7 @@
 <template>
     <div style="width: 800px;">
         <h1>Filter Component</h1>
-        <button style="margin-bottom: 10px" @click="onClicked($event)">Filter Instance Method</button>
+        <button style="margin-bottom: 10px" @click="onClicked()">Filter Instance Method</button>
         <ag-grid-vue style="width: 100%; height: 350px;" class="ag-fresh"
                      :gridOptions="gridOptions">
         </ag-grid-vue>
@@ -53,15 +53,19 @@
                     }
                 ];
             },
-            onClicked(event) {
+            onClicked() {
                 this.gridOptions.api.getFilterInstance("name").getFrameworkComponentInstance().componentMethod("Hello World!");
             }
         },
         beforeMount() {
-            this.gridOptions = {};
-            this.gridOptions.enableFilter = true;
-            this.gridOptions.rowData = this.createRowData();
-            this.gridOptions.columnDefs = this.createColumnDefs();
+            this.gridOptions = {
+                enableFilter: true,
+                rowData: this.createRowData(),
+                columnDefs: this.createColumnDefs(),
+                defaultColDef: {
+                    menuTabs: ['filterMenuTab']
+                }
+            };
         }
     }
 </script>
