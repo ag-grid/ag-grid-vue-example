@@ -18,7 +18,6 @@
     import FullWidthRowExample from './full-width-example/FullWidthExample.vue'
     import GroupedRowExample from './grouped-row-example/GroupedRowExample.vue'
     import FilterExample from './filter-example/FilterExample.vue'
-    import MasterDetailExample from './master-detail-example/MasterDetailExample.vue'
 
     export default {
         components: {
@@ -29,8 +28,7 @@
             'floating-row-example': FloatingRowExample,
             'full-width-row-example': FullWidthRowExample,
             'grouped-row-example': GroupedRowExample,
-            'filter-example': FilterExample,
-            'MasterDetailExample': MasterDetailExample,
+            'filter-example': FilterExample
         }
     }
 </script>
