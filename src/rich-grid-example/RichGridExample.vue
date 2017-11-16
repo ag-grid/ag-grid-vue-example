@@ -153,8 +153,7 @@
                             {
                                 headerName: "Country", field: "country", width: 150,
                                 cellRenderer: countryCellRenderer, pinned: true,
-                                filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20},
-                                columnGroupShow: 'open'
+                                filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}
                             },
                             {
                                 headerName: "DOB",
