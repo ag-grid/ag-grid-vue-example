@@ -22,9 +22,9 @@
     "vue"
   ],
   "dependencies": {
-    "ag-grid": "14.0.x",
-    "ag-grid-enterprise": "14.0.x",
-    "ag-grid-vue": "14.0.x",
+    "ag-grid": "^15.0.0",
+    "ag-grid-enterprise": "^15.0.0",
+    "ag-grid-vue": "^15.0.0",
     "vue": "^2.1.0",
     "vue-router": "^2.1.0",
     "babel-core": "^6.0.0",
