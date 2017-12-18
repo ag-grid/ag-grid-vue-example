@@ -40,8 +40,8 @@
                         headerName: "Row",
                         field: "row",
                         width: 400,
-                        floatingCellRendererFramework: StyledRendererComponent,
-                        floatingCellRendererParams: {
+                        pinnedRowCellRendererFramework: StyledRendererComponent,
+                        pinnedRowCellRendererParams: {
                             style: {'font-weight': 'bold'}
                         }
                     },
@@ -49,8 +49,8 @@
                         headerName: "Number",
                         field: "number",
                         width: 399,
-                        floatingCellRendererFramework: StyledRendererComponent,
-                        floatingCellRendererParams: {
+                        pinnedRowCellRendererFramework: StyledRendererComponent,
+                        pinnedRowCellRendererParams: {
                             style: {'font-style': 'italic'}
                         }
                     },
