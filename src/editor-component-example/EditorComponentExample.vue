@@ -1,6 +1,5 @@
 <template>
-    <div style="width: 800px;">
-        <h1>Editor Components</h1>
+    <div style="width: 900px;">
         <ag-grid-vue style="width: 100%; height: 350px;" class="ag-fresh"
                      :gridOptions="gridOptions">
         </ag-grid-vue>
@@ -50,14 +49,14 @@
                         cellRendererFramework: MoodRendererComponent,
                         cellEditorFramework: MoodEditorComponent,
                         editable: true,
-                        width: 250
+                        width: 300
                     },
                     {
                         headerName: "Numeric",
                         field: "number",
                         cellEditorFramework: NumericEditorComponent,
                         editable: true,
-                        width: 250
+                        width: 280
                     }
                 ]
             }

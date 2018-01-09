@@ -1,6 +1,5 @@
 <template>
-    <div style="width: 800px;">
-        <h1>Full Width Component</h1>
+    <div style="width: 900px;">
         <ag-grid-vue style="width: 100%; height: 350px;" class="ag-fresh"
                      :gridOptions="gridOptions">
         </ag-grid-vue>
@@ -49,12 +48,12 @@
                     {
                         headerName: "Name",
                         field: "name",
-                        width: 400
+                        width: 450
                     },
                     {
                         headerName: "Age",
                         field: "age",
-                        width: 399
+                        width: 430
                     },
                 ];
             }
