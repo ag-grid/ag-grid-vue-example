@@ -27,7 +27,12 @@ const routes = [
         path: '/',
         components: {
             default: RichGridExample,
-            dynamic: DynamicComponentExample
+            dynamic: DynamicComponentExample,
+            editor: EditorComponentExample,
+            pinned: PinnedRowExample,
+            "full-width": FullWidthRowExample,
+            "grouped-row": GroupedRowExample,
+            filter: FilterExample
         },
         name: "Rich Grid with Pure JavaScript"
     },
