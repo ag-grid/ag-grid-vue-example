@@ -1,6 +1,5 @@
 <template>
-    <div style="width: 800px;">
-        <h1>Rich Grid with Pure JavaScript</h1>
+    <div style="width: 900px;">
         <div style="padding: 4px;">
             <div style="float: right;">
                 <input @keyup="onQuickFilterChanged" type="text" id="quickFilterInput"
@@ -153,8 +152,7 @@
                             {
                                 headerName: "Country", field: "country", width: 150,
                                 cellRenderer: countryCellRenderer, pinned: true,
-                                filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20},
-                                columnGroupShow: 'open'
+                                filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}
                             },
                             {
                                 headerName: "DOB",

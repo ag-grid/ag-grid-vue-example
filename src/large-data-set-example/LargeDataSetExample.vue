@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 800px;">
+    <div style="width: 900px;">
         <h1>Large Data Set Component (50,000 rows)</h1>
         <ag-grid-vue style="width: 100%; height: 350px;" class="ag-fresh"
                      :gridOptions="gridOptions">

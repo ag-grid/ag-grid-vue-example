@@ -1,6 +1,5 @@
 <template>
-    <div style="width: 800px;">
-        <h1>Dynamic Components</h1>
+    <div style="width: 900px;">
         <ag-grid-vue style="width: 100%; height: 350px;" class="ag-fresh"
                      :gridOptions="gridOptions"
                      :columnDefs="columnDefs"
