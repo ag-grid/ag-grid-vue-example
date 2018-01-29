@@ -23,7 +23,7 @@ export default Vue.extend({
             return this.value > 1000000;
         },
 
-        onKeyDown(event){
+        onKeyDown(event) {
             if (!this.isKeyPressedNumeric(event)) {
                 if (event.preventDefault) event.preventDefault();
             }
@@ -31,7 +31,7 @@ export default Vue.extend({
 
         getCharCodeFromEvent(event) {
             event = event || window.event;
-            return (typeof event.which == "undefined") ? event.keyCode : event.which;
+            return (typeof event.which === "undefined") ? event.keyCode : event.which;
         },
 
         isCharNumeric(charStr) {

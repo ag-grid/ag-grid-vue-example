@@ -26,7 +26,9 @@ export default Vue.extend({
         },
 
         setModel(model) {
-            this.text = model.value;
+            if(model) {
+                this.text = model.value;
+            }
         },
 
         afterGuiAttached() {

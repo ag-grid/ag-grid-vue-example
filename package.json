@@ -1,7 +1,7 @@
 {
   "name": "ag-grid-vue-example",
   "description": "ag-Grid Vue Examples",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "author": "Sean Landsman <sean@thelandsmans.com>",
   "license": "MIT",
   "bugs": {
@@ -10,7 +10,7 @@
   "homepage": "https://github.com/ag-grid/ag-grid-vue-example#readme",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open-page '#/' --inline --hot",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
     "start": "npm run dev",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "copy-to-docs": "npm run build && gulp copy-to-ag-docs"
@@ -22,10 +22,10 @@
     "vue"
   ],
   "dependencies": {
-    "ag-grid": "^15.x",
-    "ag-grid-enterprise": "^15.x",
-    "ag-grid-vue": "^15.x",
-    "vue": "^2.1.0",
+    "ag-grid": "^16.0.0",
+    "ag-grid-enterprise": "^16.0.0",
+    "ag-grid-vue": "^16.0.0",
+    "vue": "^2.5.13",
     "vue-router": "^2.1.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
@@ -34,10 +34,10 @@
     "css-loader": "^0.25.0",
     "style-loader": "^0.13.1",
     "file-loader": "^0.9.0",
-    "vue-loader": "^10.0.0",
+    "vue-loader": "^13.7.0",
     "vue-template-compiler": "^2.1.0",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0",
+    "webpack": "3.0.x",
+    "webpack-dev-server": "2.9.x",
     "bootstrap": "3.3.6",
     "jquery": "3.1.1"
   },
