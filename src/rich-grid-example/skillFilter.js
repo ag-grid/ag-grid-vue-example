@@ -6,7 +6,7 @@ const SKILL_TEMPLATE =
     '    <div style="text-align: center;">SKILL_NAME</div>' +
     '    <div>' +
     '      <input type="checkbox"/>' +
-    '      <img src="images/skills/SKILL.png" width="30px"/>' +
+    '      <img src="https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/skills/SKILL.png" width="30px"/>' +
     '    </div>' +
     '  </span>' +
     '</label>';
