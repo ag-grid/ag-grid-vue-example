@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 900px;">
+    <div style="width: 760px;">
         <div style="padding: 4px;">
             <div style="float: right;">
                 <input @keyup="onQuickFilterChanged" type="text" id="quickFilterInput"
@@ -36,7 +36,7 @@
                 <button @click="createRowData()">Refresh Data</button>
             </div>
             <div style="clear: both;"></div>
-            <ag-grid-vue style="width: 100%; height: 350px;" class="ag-fresh"
+            <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-balham"
                          :gridOptions="gridOptions"
                          :columnDefs="columnDefs"
                          :rowData="rowData"
@@ -306,14 +306,14 @@
         let skills = [];
         RefData.IT_SKILLS.forEach(function (skill) {
             if (data && data.skills && data.skills[skill]) {
-                skills.push('<img src="images/skills/' + skill + '.png" width="16px" title="' + skill + '" />');
+                skills.push('<img src="https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/skills/' + skill + '.png" width="16px" title="' + skill + '" />');
             }
         });
         return skills.join(' ');
     }
 
     function countryCellRenderer(params) {
-        let flag = "<img border='0' width='15' height='10' style='margin-bottom: 2px' src='images/flags/" + RefData.COUNTRY_CODES[params.value] + ".png'>";
+        let flag = "<img border='0' width='15' height='10' style='margin-bottom: 2px' src='https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/flags/" + RefData.COUNTRY_CODES[params.value] + ".png'>";
         return flag + " " + params.value;
     }
 
