@@ -1,7 +1,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-    template: `<input style="height: 20px" :ref="'input'" v-model="text">`,
+    template: `<input style="height: 20px; width: 100%" :ref="'input'" v-model="text">`,
     data() {
         return {
             text: '',

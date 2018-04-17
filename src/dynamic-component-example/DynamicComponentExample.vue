@@ -1,6 +1,6 @@
 <template>
-    <div style="width: 900px;">
-        <ag-grid-vue style="width: 100%; height: 350px;" class="ag-fresh"
+    <div style="width: 760px;">
+        <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-balham"
                      :gridOptions="gridOptions"
                      :columnDefs="columnDefs"
                      :rowData="rowData">
@@ -49,7 +49,7 @@
                 }
             },
             ChildMessageComponent: {
-                template: '<span><button style="height: 20px" @click="invokeParentMethod">Invoke Parent</button></span>',
+                template: '<button style="height: 22px;border-radius: 5px" @click="invokeParentMethod">Invoke Parent</button>',
                 methods: {
                     invokeParentMethod() {
                         this.params.context.componentParent.methodFromParent(`Row: ${this.params.node.rowIndex}, Col: ${this.params.colDef.headerName}`)
