@@ -49,7 +49,6 @@
                          :suppressRowClickSelection="true"
                          :toolPanelSuppressGroups="true"
                          :toolPanelSuppressValues="true"
-                         rowHeight="22"
                          rowSelection="multiple"
 
                          :modelUpdated="onModelUpdated"
@@ -128,7 +127,7 @@
                         country: countryData.country,
                         continent: countryData.continent,
                         language: countryData.language,
-                        mobile: createRandomPhoneNumber(),
+                       mobile: createRandomPhoneNumber(),
                         landline: createRandomPhoneNumber()
                     });
                 }
