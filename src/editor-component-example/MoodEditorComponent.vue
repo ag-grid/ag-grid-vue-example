@@ -1,7 +1,9 @@
 <template>
     <div :ref="'container'" class="mood" tabindex="0" @keydown="onKeyDown">
-        <img src="https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley.png" @click="onClick(true)" :class="{selected : happy, default : !happy}">
-        <img src="https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley-sad.png" @click="onClick(false)" :class="{selected : !happy, default : happy}">
+        <img src="https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley.png"
+             @click="onClick(true)" :class="{selected : happy, default : !happy}">
+        <img src="https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley-sad.png"
+             @click="onClick(false)" :class="{selected : !happy, default : happy}">
     </div>
 </template>
 
@@ -39,8 +41,8 @@
 
             onKeyDown(event) {
                 let key = event.which || event.keyCode;
-                if (key == 37 ||  // left
-                    key == 39) {  // right
+                if (key === 37 ||  // left
+                    key === 39) {  // right
                     this.toggleMood();
                     event.stopPropagation();
                 }

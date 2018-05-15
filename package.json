@@ -10,10 +10,9 @@
   "homepage": "https://github.com/ag-grid/ag-grid-vue-example#readme",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
-    "start": "npm run dev",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "copy-to-docs": "npm run build && gulp copy-to-ag-docs"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "start": "npm run serve"
   },
   "keywords": [
     "grid",
@@ -22,29 +21,39 @@
     "vue"
   ],
   "dependencies": {
-    "ag-grid": "^17.0.0",
-    "ag-grid-enterprise": "^17.0.0",
-    "ag-grid-vue": "^17.0.0",
-    "vue": "^2.5.13",
-    "vue-router": "^2.1.0",
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-es2015": "^6.0.0",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "style-loader": "^0.13.1",
-    "file-loader": "^0.9.0",
-    "vue-loader": "^13.7.0",
-    "vue-template-compiler": "^2.1.0",
-    "webpack": "3.0.x",
-    "webpack-dev-server": "2.9.x",
+    "ag-grid": "^17.1.1",
+    "ag-grid-enterprise": "^17.1.1",
+    "ag-grid-vue": "file:../ag-grid-vue",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
     "bootstrap": "3.3.6",
-    "jquery": "3.1.1"
+    "file-loader": "^1.1.11",
+    "jquery": "3.1.1",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "webpack": "^4.8.3"
   },
   "devDependencies": {
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "run-sequence": "^1.2.2",
-    "http-server": "^0.9.0"
-  }
+    "@vue/cli-plugin-babel": "^3.0.0-beta.7",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.7",
+    "@vue/cli-service": "^3.0.0-beta.10",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }

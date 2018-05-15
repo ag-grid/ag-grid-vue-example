@@ -18,19 +18,19 @@
             }
         },
         computed: {
-            expandOrCollapseClass: function() {
+            expandOrCollapseClass: function () {
                 return {
-                    'customExpandButton expanded' : this.expanded,
-                    'customExpandButton collapsed' : !this.expanded
+                    'customExpandButton expanded': this.expanded,
+                    'customExpandButton collapsed': !this.expanded
                 }
             }
         },
         methods: {
-            expandOrCollapse (){
+            expandOrCollapse() {
                 this.params.setExpanded(!this.expanded);
             },
 
-            onExpandChanged (){
+            onExpandChanged() {
                 this.expanded = this.params.columnGroup.getOriginalColumnGroup().isExpanded()
             }
         },

@@ -7,12 +7,11 @@
 </template>
 
 <script>
-    import Vue from "vue";
     import {AgGridVue} from "ag-grid-vue";
-    import NameAndAgeRendererComponent from './NameAndAgeRendererComponent'
+    import NameAndAgeRendererComponent from './NameAndAgeRendererComponent.vue'
 
     export default {
-        data () {
+        data() {
             return {
                 gridOptions: null
             }
@@ -62,7 +61,7 @@
             this.gridOptions = {};
             this.gridOptions.rowData = this.createRowData();
             this.gridOptions.columnDefs = this.createColumnDefs();
-            this.gridOptions.isFullWidthCell = (rowNode)=> {
+            this.gridOptions.isFullWidthCell = (rowNode) => {
                 return (rowNode.id === "0") || (parseInt(rowNode.id) % 2 === 0);
             };
             this.gridOptions.fullWidthCellRendererFramework = NameAndAgeRendererComponent;
