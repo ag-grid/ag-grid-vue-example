@@ -1,35 +1,26 @@
 <template>
-    <div id="app"></div>
+    <div>
+        <ul v-if="!forDocs" class="nav nav-pills" style="margin-bottom: 20px">
+            <template v-for="route in routes">
+                <li role="presentation" v-bind:key="route.path" :class="{active : $route.path === route.path}">
+                    <router-link :to="route.path">{{route.name}}</router-link>
+                </li>
+            </template>
+        </ul>
+        <router-view></router-view>
+    </div>
 </template>
-
 <script>
-    import Vue from "vue";
-
-    import "../node_modules/ag-grid/dist/styles/ag-grid.css"
-    import "../node_modules/ag-grid/dist/styles/ag-theme-balham.css"
-    // only needed if you're using enterprise features
-    import "ag-grid-enterprise/main";
-
-    import RichGridExample from './rich-grid-example/RichGridExample.vue'
-    import DynamicComponentExample from './dynamic-component-example/DynamicComponentExample.vue'
-    import EditorComponentExample from './editor-component-example/EditorComponentExample.vue'
-    import PinnedRowExample from './pinned-row-example/PinnedRowExample.vue'
-    import FullWidthRowExample from './full-width-example/FullWidthExample.vue'
-    import GroupedRowExample from './grouped-row-example/GroupedRowExample.vue'
-    import FilterExample from './filter-example/FilterExample.vue'
+    import routes from './routes';
 
     export default {
-        components: {
-            'rich-grid-example': RichGridExample,
-            'dynamic-components-example': DynamicComponentExample,
-            'editor-components-example': EditorComponentExample,
-            'pinned-row-example': PinnedRowExample,
-            'full-width-row-example': FullWidthRowExample,
-            'grouped-row-example': GroupedRowExample,
-            'filter-example': FilterExample
-        }
+        computed: {
+            forDocs() {
+                return this.$route.query.forDocs || false;
+            },
+            routes() {
+                return routes
+            }
+        },
     }
 </script>
-
-<style>
-</style>

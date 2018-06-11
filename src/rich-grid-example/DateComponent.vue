@@ -31,7 +31,7 @@
                 this.params.onDateChanged();
             },
 
-            onDateChanged (on, $event){
+            onDateChanged(on, $event) {
                 let targetValue = $event.target.value;
                 this.date = this.parseDate(
                     on === 'dd' ? targetValue : this.dd,
@@ -41,12 +41,12 @@
                 this.params.onDateChanged();
             },
 
-            getDate(){
+            getDate() {
                 return this.date;
             },
 
             setDate(date) {
-                if(!date) return;
+                if (!date) return;
 
                 this.dd = date.getDate() + '';
                 this.mm = (date.getMonth() + 1) + '';
@@ -55,7 +55,7 @@
                 this.params.onDateChanged();
             },
 
-            parseDate (dd, mm, yyyy){
+            parseDate(dd, mm, yyyy) {
                 //If any of the three input date fields are empty, stop and return null
                 if (dd.trim() === '' || mm.trim() === '' || yyyy.trim() === '') {
                     return null;

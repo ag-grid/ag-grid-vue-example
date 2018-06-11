@@ -7,12 +7,11 @@
 </template>
 
 <script>
-    import Vue from "vue";
     import {AgGridVue} from "ag-grid-vue";
-    import StyledRendererComponent from './StyledRendererComponent'
+    import StyledRendererComponent from './StyledRendererComponent.vue'
 
     export default {
-        data () {
+        data() {
             return {
                 gridOptions: null
             }

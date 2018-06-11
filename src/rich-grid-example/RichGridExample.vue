@@ -13,7 +13,6 @@
             </div>
         </div>
         <div style="clear: both;"></div>
-
         <div v-if="showGrid">
             <div style="padding: 4px;" class="toolbar">
             <span>
@@ -49,7 +48,6 @@
                          :suppressRowClickSelection="true"
                          :toolPanelSuppressGroups="true"
                          :toolPanelSuppressValues="true"
-                         rowHeight="22"
                          rowSelection="multiple"
 
                          :modelUpdated="onModelUpdated"
@@ -83,7 +81,6 @@
 </template>
 
 <script>
-    import Vue from "vue";
     import {AgGridVue} from "ag-grid-vue";
 
     import {ProficiencyFilter} from './proficiencyFilter';
@@ -93,7 +90,7 @@
     import RefData from './refData'
 
     export default {
-        data () {
+        data() {
             return {
                 gridOptions: null,
                 columnDefs: null,
@@ -104,7 +101,7 @@
             }
         },
         components: {
-            'ag-grid-vue': AgGridVue
+            AgGridVue
         },
         methods: {
             createRowData() {
@@ -244,8 +241,9 @@
             },
 
             // taking out, as when we 'select all', it prints to much to the console!!
+            // eslint-disable-next-line
             onRowSelected(event) {
-//                console.log('onRowSelected: ' + event.node.data.name);
+                // console.log('onRowSelected: ' + event.node.data.name);
             },
 
             onSelectionChanged() {
@@ -272,6 +270,7 @@
                 console.log('onAfterSortChanged');
             },
 
+            // eslint-disable-next-line
             onVirtualRowRemoved(event) {
                 // because this event gets fired LOTS of times, we don't print it to the
                 // console. if you want to see it, just uncomment out this line

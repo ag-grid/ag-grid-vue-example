@@ -1,4 +1,5 @@
-.DS_Store
+gi.DS_Store
 node_modules/
 dist/
 npm-debug.log
+.DS_Store

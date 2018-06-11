@@ -7,14 +7,13 @@
 </template>
 
 <script>
-    import Vue from "vue";
     import {AgGridVue} from "ag-grid-vue";
-    import MoodRendererComponent from './MoodRendererComponent'
+    import MoodRendererComponent from './MoodRendererComponent.vue'
     import MoodEditorComponent from './MoodEditorComponent.vue'
-    import NumericEditorComponent from './NumericEditorComponent'
+    import NumericEditorComponent from './NumericEditorComponent.vue'
 
     export default {
-        data () {
+        data() {
             return {
                 gridOptions: null
             }
