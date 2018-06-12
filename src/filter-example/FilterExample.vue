@@ -8,9 +8,8 @@
 </template>
 
 <script>
-    import Vue from "vue";
     import {AgGridVue} from "ag-grid-vue";
-    import PartialMatchFilterComponent from './PartialMatchFilterComponent'
+    import PartialMatchFilterComponent from './PartialMatchFilterComponent.vue'
 
     export default {
         data() {

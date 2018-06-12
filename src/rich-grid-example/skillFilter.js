@@ -17,7 +17,7 @@ const FILTER_TITLE =
     '</div>';
 
 export class SkillFilter {
-    init(params){
+    init(params) {
         this.filterChangedCallback = params.filterChangedCallback;
         this.model = {
             android: false,
@@ -78,11 +78,11 @@ export class SkillFilter {
         return somethingSelected;
     }
 
-    getModel(){
+    getModel() {
         return undefined;
     }
 
-    setModel(model){
+    setModel(model) {
     }
 }
 

@@ -11,10 +11,14 @@
 <script>
     import Vue from "vue";
     import {AgGridVue} from "ag-grid-vue";
+    import ParamsComponent from './ParamsComponent.vue'
+    import ChildMessageComponent from './ChildMessageComponent.vue'
     import CurrencyComponent from './CurrencyComponent.vue'
 
     let SquareComponent = Vue.extend({
-        template: '<span>{{ valueSquared() }}</span>',
+        render: function (h) {
+            return h('span', this.valueSquared())
+        },
         methods: {
             valueSquared() {
                 return this.params.value * this.params.value;
@@ -23,7 +27,7 @@
     });
 
     export default {
-        data () {
+        data() {
             return {
                 gridOptions: null,
                 columnDefs: null,
@@ -33,29 +37,17 @@
         components: {
             'ag-grid-vue': AgGridVue,
             'CubeComponent': {
-                template: '<span>{{ valueCubed() }}</span>',
+                render: function (h) {
+                    return h('span', this.valueCubed())
+                },
                 methods: {
                     valueCubed() {
                         return this.params.value * this.params.value * this.params.value;
                     }
                 }
             },
-            ParamsComponent: {
-                template: '<span>Field: {{params.colDef.field}}, Value: {{params.value}}</span>',
-                methods: {
-                    valueCubed() {
-                        return this.params.value * this.params.value * this.params.value;
-                    }
-                }
-            },
-            ChildMessageComponent: {
-                template: '<button style="height: 22px;border-radius: 5px" @click="invokeParentMethod">Invoke Parent</button>',
-                methods: {
-                    invokeParentMethod() {
-                        this.params.context.componentParent.methodFromParent(`Row: ${this.params.node.rowIndex}, Col: ${this.params.colDef.headerName}`)
-                    }
-                }
-            }
+            ParamsComponent,
+            ChildMessageComponent
         },
         methods: {
             createRowData() {

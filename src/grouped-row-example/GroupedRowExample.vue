@@ -7,12 +7,11 @@
 </template>
 
 <script>
-    import Vue from "vue";
     import {AgGridVue} from "ag-grid-vue";
-    import MedalRendererComponent from './MedalRendererComponent'
+    import MedalRendererComponent from './MedalRendererComponent.vue'
 
     export default {
-        data () {
+        data() {
             return {
                 gridOptions: null
             }
@@ -62,7 +61,7 @@
                     {country: "Brazil", name: "Jack", gold: 1, silver: 0, bronze: 1},
                     {country: "Brazil", name: "Mary", gold: 1, silver: 0, bronze: 1},
                     {country: "Brazil", name: "John", gold: 1, silver: 0, bronze: 1}
-                    ];
+                ];
             },
             createColumnDefs() {
                 return [
