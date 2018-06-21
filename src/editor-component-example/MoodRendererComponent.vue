@@ -18,7 +18,9 @@
 
             setMood(params) {
                 this.mood = params.value;
-                this.imgForMood = this.mood === 'Happy' ? 'https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley.png' : 'https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley-sad.png';
+                this.imgForMood = this.mood === 'Happy' ?
+                    'https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley.png' :
+                    'https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/smiley-sad.png';
             }
         },
         created() {
@@ -26,3 +28,9 @@
         }
     })
 </script>
+
+<style scoped>
+    img {
+        vertical-align: baseline;
+    }
+</style>
