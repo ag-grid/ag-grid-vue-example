@@ -35,8 +35,8 @@ export class ProficiencyFilter {
         let that = this;
         PROFICIENCY_NAMES.forEach(function (name, index) {
             let eFilter = document.createElement('div');
-            let html = PROFICIENCY_TEMPLATE.replace('PROFICIENCY_NAME', name).replace('RANDOM', random);
-            eFilter.innerHTML = html;
+            eFilter.style.marginTop = "3px";
+            eFilter.innerHTML = PROFICIENCY_TEMPLATE.replace('PROFICIENCY_NAME', name).replace('RANDOM', random);
             let eRadio = eFilter.querySelector('input');
             if (index === 0) {
                 eRadio.checked = true;

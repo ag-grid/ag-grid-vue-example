@@ -390,4 +390,10 @@
     .ag-menu {
         z-index: 200;
     }
+
+    .toolbar button {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 2px;
+    }
 </style>
