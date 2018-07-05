@@ -81,6 +81,7 @@
 </template>
 
 <script>
+    /* eslint-disable */
     import {AgGridVue} from "ag-grid-vue";
 
     import {ProficiencyFilter} from './proficiencyFilter';
@@ -388,5 +389,11 @@
 
     .ag-menu {
         z-index: 200;
+    }
+
+    .toolbar button {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 2px;
     }
 </style>
