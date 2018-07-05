@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-vue-example",
-  "version": "18.0.0",
+  "version": "18.1.0",
   "private": true,
   "scripts": {
     "start": "npm run serve",
@@ -8,9 +8,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "ag-grid": "^18.0.1",
-    "ag-grid-enterprise": "^18.0.1",
-    "ag-grid-vue": "^18.0.0",
+    "ag-grid": "^18.1.0",
+    "ag-grid-enterprise": "^18.1.0",
+    "ag-grid-vue": "^18.1.0",
     "bootstrap": "^3.3.7",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
