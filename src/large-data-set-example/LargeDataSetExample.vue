@@ -1,6 +1,6 @@
 <template>
     <div style="width: 760px;">
-        <h1>Large Data Set Component (100,500 rows, 95 Columns)</h1>
+        <h1>Large Data Set Component (100,500 rows, 95 Columns) ({{rowCount}} shown)</h1>
         <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-balham"
                      :gridOptions="gridOptions">
         </ag-grid-vue>
@@ -13,15 +13,57 @@
     export default {
         data() {
             return {
-                text: null
+                text: null,
+                rowCount: 100500
+            }
+        },
+        methods: {
+            onModelUpdated(data) {
+                console.log('rows to display ', data.api.getModel().rowsToDisplay)
+                console.log('keep rendered rows ', data.keepRenderedRows)
+                console.log('data.newData ', data.newData)
+                // data.keepRenderedRows = false
+            },
+            onFilterChanged(data) {
+            // let rowsToDisplay = data.api.rowModel.rowsToDisplay
+            // data.api.getRenderedNodes()  
+            // data.api.redrawRows({rowNodes: rowsToDisplay})
+            this.updateRowCount(data.api.getModel().getRowCount())
+            // data.api.refreshClientSideRowModel() 
+        // 
+            },
+            updateRowCount(param){
+                this.rowCount = param
             }
         },
         computed: {
             gridOptions: function () {
                 let gridOptions = {};
                 gridOptions.rowData = this.rowData;
+                gridOptions.rowModelType = 'clientSide';
+                gridOptions.floatingFilter = true;
+                gridOptions.defaultColDef = {
+                    filter: 'agTextColumnFilter',
+                    filterParams: {
+                        nullComparator: false,
+                        newRowsAction: 'keep',
+                        debounceMs: 1000
+                    },
+                    suppressMenu: true,
+                },
+                gridOptions.showToolPanel = false;
+                gridOptions.toolPanelSuppressPivotMode = true;
+                gridOptions.toolPanelSuppressValues = true;
+                gridOptions.toolPanelSuppressRowGroups = true
+                gridOptions.toolPanelSuppressSideButtons = true;
+                gridOptions.suppressScrollOnNewData = true;
+                gridOptions.onFilterChanged = this.onFilterChanged;
                 gridOptions.columnDefs = this.columnDefs;
                 gridOptions.enableSorting = true;
+                gridOptions.infiniteInitialRowCount = true;
+                gridOptions.deltaRowDataMode = true; 
+                gridOptions.onModelUpdated = this.onModelUpdated
+
                 return gridOptions
             }
         },
