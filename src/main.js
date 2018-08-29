@@ -10,6 +10,8 @@ import routes from './routes';
 
 // only needed if you use ag-grid enterprise features
 import "ag-grid-enterprise";
+
+import store from './store'
 // import {LicenseManager} from "ag-grid-enterprise";
 // LicenseManager.setLicenseKey("your license key");
 
@@ -21,5 +23,9 @@ const router = new VueRouter({
 
 new Vue({
     router,
-    render: h => h(App)
+    store,
+    render: h => h(App),
+    beforeMount(){
+    	this.$store.dispatch('createRowData')
+    }
 }).$mount('#app');

@@ -9,12 +9,13 @@
 
 <script>
     import {AgGridVue} from "ag-grid-vue";
-
+    import {mapState} from 'vuex'
     export default {
         data() {
             return {
                 text: null,
-                rowCount: 100500
+                rowCount: 100500,
+
             }
         },
         methods: {
@@ -37,6 +38,12 @@
             }
         },
         computed: {
+            rowData(){
+                return this.$store.state.rowData
+            },
+            columnDefs(){
+                return this.$store.state.columnDefs
+            },
             gridOptions: function () {
                 let gridOptions = {};
                 gridOptions.rowData = this.rowData;
@@ -73,118 +80,23 @@
         created() {
             // data created here so outside of vue (ie no reactive, not observed)
             // also frozen (prob unnecessarily)
-            this.rowData = [];
-            for (let i = 0; i < 100500; i++) {
-                this.rowData.push(Object.freeze({
-                    recordNumber: i,
-                    value1: Math.floor(Math.random() * 10000),
-                    value2: Math.floor(Math.random() * 10000),
-                    value3: Math.floor(Math.random() * 10000),
-                    value4: Math.floor(Math.random() * 10000),
-                    value5: Math.floor(Math.random() * 10000),
-                    value6: Math.floor(Math.random() * 10000),
-                    value7: Math.floor(Math.random() * 10000)
-                }));
-            }
-            this.rowData = Object.freeze(this.rowData);
+            // this.rowData = [];
+            // for (let i = 0; i < 100500; i++) {
+            //     this.rowData.push(Object.freeze({
+            //         recordNumber: i,
+            //         value1: Math.floor(Math.random() * 10000),
+            //         value2: Math.floor(Math.random() * 10000),
+            //         value3: Math.floor(Math.random() * 10000),
+            //         value4: Math.floor(Math.random() * 10000),
+            //         value5: Math.floor(Math.random() * 10000),
+            //         value6: Math.floor(Math.random() * 10000),
+            //         value7: Math.floor(Math.random() * 10000)
+            //     }));
+            // }
+            // this.rowData = Object.freeze(this.rowData);
 
-            this.columnDefs = Object.freeze([
-                {headerName: 'Record', field: 'recordNumber'},
-                {headerName: 'Value 1', field: 'value1'},
-                {headerName: 'Value 2', field: 'value2'},
-                {headerName: 'Value 3', field: 'value3'},
-                {headerName: 'Value 4', field: 'value4'},
-                {headerName: 'Value 5', field: 'value5'},
-                {headerName: 'Value 6', field: 'value6'},
-                {headerName: 'Value 7', field: 'value7'},
-                {headerName: 'Value 8', field: 'value4'},
-                {headerName: 'Value 9', field: 'value4'},
-                {headerName: 'Value 10', field: 'value4'},
-                {headerName: 'Value 11', field: 'value4'},
-                {headerName: 'Value 12', field: 'value4'},
-                {headerName: 'Value 13', field: 'value4'},
-                {headerName: 'Value 14', field: 'value4'},
-                {headerName: 'Value 15', field: 'value4'},
-                {headerName: 'Value 16', field: 'value4'},
-                {headerName: 'Value 17', field: 'value4'},
-                {headerName: 'Value 18', field: 'value4'},
-                {headerName: 'Value 19', field: 'value4'},
-                {headerName: 'Value 20', field: 'value4'},
-                {headerName: 'Value 21', field: 'value4'},
-                {headerName: 'Value 22', field: 'value4'},
-                {headerName: 'Value 23', field: 'value4'},
-                {headerName: 'Value 24', field: 'value4'},
-                {headerName: 'Value 25', field: 'value4'},
-                {headerName: 'Value 26', field: 'value4'},
-                {headerName: 'Value 27', field: 'value4'},
-                {headerName: 'Value 28', field: 'value4'},
-                {headerName: 'Value 29', field: 'value4'},
-                {headerName: 'Value 30', field: 'value4'},
-                {headerName: 'Value 31', field: 'value4'},
-                {headerName: 'Value 32', field: 'value4'},
-                {headerName: 'Value 33', field: 'value4'},
-                {headerName: 'Value 34', field: 'value4'},
-                {headerName: 'Value 35', field: 'value4'},
-                {headerName: 'Value 36', field: 'value4'},
-                {headerName: 'Value 37', field: 'value4'},
-                {headerName: 'Value 38', field: 'value4'},
-                {headerName: 'Value 39', field: 'value4'},
-                {headerName: 'Value 40', field: 'value4'},
-                {headerName: 'Value 41', field: 'value4'},
-                {headerName: 'Value 42', field: 'value4'},
-                {headerName: 'Value 43', field: 'value4'},
-                {headerName: 'Value 44', field: 'value4'},
-                {headerName: 'Value 45', field: 'value4'},
-                {headerName: 'Value 46', field: 'value4'},
-                {headerName: 'Value 47', field: 'value4'},
-                {headerName: 'Value 48', field: 'value4'},
-                {headerName: 'Value 49', field: 'value4'},
-                {headerName: 'Value 50', field: 'value4'},
-                {headerName: 'Value 51', field: 'value4'},
-                {headerName: 'Value 52', field: 'value4'},
-                {headerName: 'Value 53', field: 'value4'},
-                {headerName: 'Value 54', field: 'value4'},
-                {headerName: 'Value 55', field: 'value4'},
-                {headerName: 'Value 56', field: 'value4'},
-                {headerName: 'Value 57', field: 'value4'},
-                {headerName: 'Value 58', field: 'value4'},
-                {headerName: 'Value 59', field: 'value4'},
-                {headerName: 'Value 60', field: 'value4'},
-                {headerName: 'Value 61', field: 'value4'},
-                {headerName: 'Value 62', field: 'value4'},
-                {headerName: 'Value 63', field: 'value4'},
-                {headerName: 'Value 64', field: 'value4'},
-                {headerName: 'Value 65', field: 'value4'},
-                {headerName: 'Value 66', field: 'value4'},
-                {headerName: 'Value 67', field: 'value4'},
-                {headerName: 'Value 68', field: 'value4'},
-                {headerName: 'Value 69', field: 'value4'},
-                {headerName: 'Value 70', field: 'value4'},
-                {headerName: 'Value 71', field: 'value4'},
-                {headerName: 'Value 72', field: 'value4'},
-                {headerName: 'Value 73', field: 'value4'},
-                {headerName: 'Value 74', field: 'value4'},
-                {headerName: 'Value 75', field: 'value4'},
-                {headerName: 'Value 76', field: 'value4'},
-                {headerName: 'Value 77', field: 'value4'},
-                {headerName: 'Value 78', field: 'value4'},
-                {headerName: 'Value 79', field: 'value4'},
-                {headerName: 'Value 80', field: 'value4'},
-                {headerName: 'Value 81', field: 'value4'},
-                {headerName: 'Value 82', field: 'value4'},
-                {headerName: 'Value 83', field: 'value4'},
-                {headerName: 'Value 84', field: 'value4'},
-                {headerName: 'Value 85', field: 'value4'},
-                {headerName: 'Value 86', field: 'value4'},
-                {headerName: 'Value 87', field: 'value4'},
-                {headerName: 'Value 88', field: 'value4'},
-                {headerName: 'Value 89', field: 'value4'},
-                {headerName: 'Value 90', field: 'value4'},
-                {headerName: 'Value 91', field: 'value4'},
-                {headerName: 'Value 92', field: 'value4'},
-                {headerName: 'Value 93', field: 'value4'},
-                {headerName: 'Value 94', field: 'value4'}]
-            )
+            // this.columnDefs = Object.freeze(
+            // )
         }
     }
 </script>
