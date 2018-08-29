@@ -1,5 +1,7 @@
 import "../node_modules/ag-grid/dist/styles/ag-grid.css";
 import "../node_modules/ag-grid/dist/styles/ag-theme-balham.css";
+import "../node_modules/ag-grid/dist/styles/theme-material.css";
+
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 
@@ -26,6 +28,6 @@ new Vue({
     store,
     render: h => h(App),
     beforeMount(){
-    	this.$store.dispatch('createRowData')
+    	this.$store.dispatch('createRowDataIndications')
     }
 }).$mount('#app');

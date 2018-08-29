@@ -1,7 +1,7 @@
 <template>
-    <div style="width: 760px;">
+    <div style="width: 100vw; height: 90vh">
         <h1>Large Data Set Component (100,500 rows, 95 Columns) ({{rowCount}} shown)</h1>
-        <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-balham"
+        <ag-grid-vue style="width: 100%; height: 100%;" class="ag-theme-material ag-material"
                      :gridOptions="gridOptions">
         </ag-grid-vue>
     </div>
@@ -47,6 +47,7 @@
             gridOptions: function () {
                 let gridOptions = {};
                 gridOptions.rowData = this.rowData;
+                gridOptions.rowHeight = 33.5;
                 gridOptions.rowModelType = 'clientSide';
                 gridOptions.floatingFilter = true;
                 gridOptions.defaultColDef = {
@@ -102,4 +103,48 @@
 </script>
 
 <style>
+
+.number-cell {
+    text-align: right;
+    padding-right:25px!important;
+}
+.object-cell {
+    opacity: .5;
+}
+.empty-cell {
+    opacity: .6;
+}
+.empty-cell:hover {
+    background-color: #CCCCCC;
+}
+.word-cell, .boolean-cell, .time-cell{
+    padding-left: 3px!important;
+    text-align:left;
+}
+.ag-material .ag-row-odd {
+    background-color: #f4f5f7;
+}
+
+.ag-icon-asc, .ag-icon-desc {
+    background-size: 1.10rem 1.10rem;
+    height: 1.05rem;
+    width: 1.05rem;
+}
+.ag-floating-filter-input {
+    background-color: #fff;
+    border: 1px solid lightgrey;
+}
+
+.ag-material .ag-cell-not-inline-editing {
+    padding: 5px 0;
+}
+.ag-header {
+    height: 67px !important;
+    min-height: 67px !important;
+}
+.ag-header-row {
+    height: 36px !important;
+    position: relative;
+    top: 0 !important;
+}
 </style>

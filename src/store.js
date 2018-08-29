@@ -1,12 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  state: {
-  	rowData: [],
-  	columnDefs: [
+const indicationData = require('./noSequenceDupes.json')
+// let NUM_ROWS_TIMES_500 = 205;
+import colDefs from './colDefs'
+let colDefsRandom = [
             {headerName: 'Record', field: 'recordNumber', filter: 'agNumberColumnFilter'},
             {headerName: 'Value 1', field: 'value1'},
             {headerName: 'Value 2', field: 'value2'},
@@ -103,6 +100,12 @@ export default new Vuex.Store({
             {headerName: 'Value 93', field: 'value3'},
             {headerName: 'Value 94', field: 'value4'}
         ]
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  state: {
+  	rowData: [],
+  	columnDefs: colDefs
   },
   mutations: {
   	saveRowData(state, payload) {
@@ -110,7 +113,7 @@ export default new Vuex.Store({
   	}
   },
   actions: {
-  	createRowData(context, payload) {
+  	createRowDataRandom(context, payload) {
   		let rowData = []
   		     for (let i = 0; i < 100500; i++) {
                 rowData.push({
@@ -129,6 +132,21 @@ export default new Vuex.Store({
                 });
             }
          context.commit('saveRowData', rowData)
+         
+  	},
+  	createRowDataIndications(context, payload){
+  		let data = indicationData
+  		let numberOfTimes = 205
+	    for (let i = 1; i < numberOfTimes; i++) {
+	        data = data.concat(indicationData);
+	    }
+	    data = data.map((item, index)=>{
+	        item["indexColumn"] = index
+	        return item
+	    })
+
+	    context.commit('saveRowData', data)
+
   	}
   }
 })
