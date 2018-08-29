@@ -11,7 +11,7 @@ const colDefs = [
 
 {"headerName":"LnMatchingQuantity","field":"LnMatchingQuantity", "cellClass": "number-cell"},
 
-{"headerName":"LnCompletionPercentage","field":"LnCompletionPercentage", "cellClass": "percent-cell"}, //"cellRendererFramework": "CompletionPercentageRenderer", 
+{"headerName":"LnCompletionPercentage","field":"LnCompletionPercentage", "cellClass": "percent-cell", "cellRendererFramework": "CompletionPercentageRenderer",},  
 
 {"headerName":"LnCompletedQuantity","field":"LnCompletedQuantity", "cellRenderer":"agAnimateShowChangeCellRenderer", "cellClass": "number-cell"},
 

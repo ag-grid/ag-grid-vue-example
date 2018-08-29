@@ -1,5 +1,5 @@
 import RichGridExample from "./rich-grid-example/RichGridExample.vue";
-import LargeDataSetExample from "./large-data-set-example/LargeDataSetExample.vue";
+import LargeDataSetContainer from "./large-data-set-example/LargeDataSetContainer.vue";
 
 export default [
     {
@@ -9,5 +9,5 @@ export default [
         },
         name: "Rich Grid with Pure JavaScript"
     },
-    {path: '/large-data', component: LargeDataSetExample, name: "Large Data Example"}
+    {path: '/large-data', component: LargeDataSetContainer, name: "Large Data Example"}
 ];

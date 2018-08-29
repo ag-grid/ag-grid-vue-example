@@ -1,6 +1,5 @@
 <template>
     <div style="width: 100vw; height: 90vh">
-        <h1>Large Data Set Component (100,500 rows, 95 Columns) ({{rowCount}} shown)</h1>
         <ag-grid-vue style="width: 100%; height: 100%;" class="ag-theme-material ag-material"
                      :gridOptions="gridOptions">
         </ag-grid-vue>
@@ -8,15 +7,24 @@
 </template>
 
 <script>
+    import CompletionPercentageRenderer from './CompletionPercentageRenderer'
     import {AgGridVue} from "ag-grid-vue";
     import {mapState} from 'vuex'
     export default {
+        props: {
+            setRowCount: {
+                type: Function
+            }
+        },
         data() {
             return {
                 text: null,
                 rowCount: 100500,
 
             }
+        },
+        mounted(){
+            this.updateRowCount(this.rowData.length)
         },
         methods: {
             onModelUpdated(data) {
@@ -29,7 +37,7 @@
             // let rowsToDisplay = data.api.rowModel.rowsToDisplay
             // data.api.getRenderedNodes()  
             // data.api.redrawRows({rowNodes: rowsToDisplay})
-            this.updateRowCount(data.api.getModel().getRowCount())
+                this.setRowCount(data.api.getModel().getRowCount())
             // data.api.refreshClientSideRowModel() 
         // 
             },
@@ -76,7 +84,8 @@
             }
         },
         components: {
-            'ag-grid-vue': AgGridVue
+            'ag-grid-vue': AgGridVue,
+            CompletionPercentageRenderer
         },
         created() {
             // data created here so outside of vue (ie no reactive, not observed)
