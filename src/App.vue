@@ -1,14 +1,13 @@
 <template>
-    <div>
-        <ul v-if="!forDocs" class="nav nav-pills" style="margin-bottom: 20px">
-            <template v-for="route in routes">
-                <li role="presentation" v-bind:key="route.path" :class="{active : $route.path === route.path}">
-                    <router-link :to="route.path">{{route.name}}</router-link>
-                </li>
-            </template>
-        </ul>
+    <v-app>
+        <v-toolbar app dense>
+            <v-toolbar-items v-for="route in routes" :key="route.path"> 
+                <v-btn flat role="presentation" :class="{active : $route.path === route.path}" :to="route.path">{{route.name}}</v-btn>
+            </v-toolbar-items > 
+
+        </v-toolbar>
         <router-view></router-view>
-    </div>
+    </v-app>
 </template>
 <script>
     import routes from './routes';

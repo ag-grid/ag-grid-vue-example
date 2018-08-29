@@ -1,9 +1,12 @@
 <template>
-    <div style="width: 100vw; height: 90vh">
+<v-layout row wrap>
+
+    <v-flex xs12 style="width: 100vw; height: 90vh">
         <ag-grid-vue style="width: 100%; height: 100%;" class="ag-theme-material ag-material"
                      :gridOptions="gridOptions">
         </ag-grid-vue>
-    </div>
+    </v-flex>
+</v-layout>
 </template>
 
 <script>

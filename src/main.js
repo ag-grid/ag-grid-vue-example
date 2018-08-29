@@ -1,3 +1,4 @@
+import '@babel/polyfill'
 import "../node_modules/ag-grid/dist/styles/ag-grid.css";
 import "../node_modules/ag-grid/dist/styles/ag-theme-balham.css";
 import "../node_modules/ag-grid/dist/styles/theme-material.css";
@@ -6,6 +7,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 
 import Vue from "vue";
+import './plugins/vuetify'
 import VueRouter from "vue-router";
 import App from './App.vue';
 import routes from './routes';
