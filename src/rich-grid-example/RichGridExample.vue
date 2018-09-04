@@ -29,8 +29,8 @@
             <div style="clear: both;"></div>
             <div style="padding: 4px;" class="toolbar">
                 <label>
-                    <input type="checkbox" v-model="showToolPanel"/>
-                    Show Tool Panel
+                    <input type="checkbox" v-model="sideBar"/>
+                    Show Side Bar
                 </label>
                 <button @click="createRowData()">Refresh Data</button>
             </div>
@@ -39,15 +39,13 @@
                          :gridOptions="gridOptions"
                          :columnDefs="columnDefs"
                          :rowData="rowData"
-                         :showToolPanel="showToolPanel"
+                         :sideBar="sideBar"
 
                          :enableColResize="true"
                          :enableSorting="true"
                          :enableFilter="true"
                          :groupHeaders="true"
                          :suppressRowClickSelection="true"
-                         :toolPanelSuppressGroups="true"
-                         :toolPanelSuppressValues="true"
                          rowSelection="multiple"
 
                          :modelUpdated="onModelUpdated"
@@ -97,7 +95,7 @@
                 columnDefs: null,
                 rowData: null,
                 showGrid: false,
-                showToolPanel: false,
+                sideBar: false,
                 rowCount: null
             }
         },
@@ -162,7 +160,7 @@
                                         this.pad(params.value.getMonth() + 1, 2) + '/' +
                                         params.value.getFullYear();
                                 },
-                                filter: 'date',
+                                filter: 'agDateColumnFilter',
                                 columnGroupShow: 'open'
                             }
                         ]
