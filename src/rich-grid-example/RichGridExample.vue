@@ -79,7 +79,6 @@
 </template>
 
 <script>
-    /* eslint-disable */
     import {AgGridVue} from "ag-grid-vue";
 
     import {ProficiencyFilter} from './proficiencyFilter';
