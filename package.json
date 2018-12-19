@@ -8,11 +8,12 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "2.5.16",
-    "vue-router": "3.0.1",
     "ag-grid-community": "^19.1.0",
     "ag-grid-enterprise": "^19.1.0",
     "ag-grid-vue": "^19.1.0",
+    "vue": "2.5.16",
+    "vue-router": "3.0.1",
+    "vue-property-decorator": "^7.2.0",
     "bootstrap": "3.3.7"
   },
   "devDependencies": {
