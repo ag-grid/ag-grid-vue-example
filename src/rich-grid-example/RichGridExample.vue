@@ -48,31 +48,26 @@
                          :suppressRowClickSelection="true"
                          rowSelection="multiple"
 
-                         :modelUpdated="onModelUpdated"
-                         :cellClicked="onCellClicked"
-                         :cellDoubleClicked="onCellDoubleClicked"
-                         :cellContextMenu="onCellContextMenu"
-                         :cellValueChanged="onCellValueChanged"
-                         :cellFocused="onCellFocused"
-                         :rowSelected="onRowSelected"
-                         :selectionChanged="onSelectionChanged"
-                         :beforeFilterChanged="onBeforeFilterChanged"
-                         :afterFilterChanged="onAfterFilterChanged"
-                         :filterModified="onFilterModified"
-                         :beforeSortChanged="onBeforeSortChanged"
-                         :afterSortChanged="onAfterSortChanged"
-                         :virtualRowRemoved="onVirtualRowRemoved"
-                         :rowClicked="onRowClicked"
-                         :gridReady="onReady"
-
-                         :columnEverythingChanged="onColumnEvent"
-                         :columnRowGroupChanged="onColumnEvent"
-                         :columnValueChanged="onColumnEvent"
-                         :columnMoved="onColumnEvent"
-                         :columnVisible="onColumnEvent"
-                         :columnGroupOpened="onColumnEvent"
-                         :columnResized="onColumnEvent"
-                         :columnPinnedCountChanged="onColumnEvent">
+                         @grid-ready="onReady"
+                         @model-updated="onModelUpdated"
+                         @cell-clicked="onCellClicked"
+                         @cell-double-clicked="onCellDoubleClicked"
+                         @cell-context-menu="onCellContextMenu"
+                         @cell-value-changed="onCellValueChanged"
+                         @cell-focused="onCellFocused"
+                         @row-selected="onRowSelected"
+                         @selection-changed="onSelectionChanged"
+                         @filter-modified="onFilterModified"
+                         @virtual-row-removed="onVirtualRowRemoved"
+                         @row-clicked="onRowClicked"
+                         @column-everything-changed="onColumnEvent"
+                         @column-row-group-changed="onColumnEvent"
+                         @column-value-Changed="onColumnEvent"
+                         @column-moved="onColumnEvent"
+                         @column-visible="onColumnEvent"
+                         @column-group-Opened="onColumnEvent"
+                         @column-resized="onColumnEvent"
+                         @column-pinned-count-changed="onColumnEvent">
             </ag-grid-vue>
         </div>
     </div>
@@ -248,24 +243,8 @@
                 console.log('selectionChanged');
             },
 
-            onBeforeFilterChanged() {
-                console.log('beforeFilterChanged');
-            },
-
-            onAfterFilterChanged() {
-                console.log('afterFilterChanged');
-            },
-
             onFilterModified() {
                 console.log('onFilterModified');
-            },
-
-            onBeforeSortChanged() {
-                console.log('onBeforeSortChanged');
-            },
-
-            onAfterSortChanged() {
-                console.log('onAfterSortChanged');
             },
 
             // eslint-disable-next-line
