@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-vue-example",
-  "version": "19.1.2",
+  "version": "20.0.0",
   "private": true,
   "scripts": {
     "start": "npm run serve",
@@ -8,9 +8,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "ag-grid-community": "^19.1.0",
-    "ag-grid-enterprise": "^19.1.0",
-    "ag-grid-vue": "^19.1.0",
+    "ag-grid-community": "^20.0.0",
+    "ag-grid-enterprise": "^20.0.0",
+    "ag-grid-vue": "^20.0.0",
     "vue": "2.5.21",
     "vue-router": "3.0.2",
     "vue-property-decorator": "7.2.0",
