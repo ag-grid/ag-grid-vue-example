@@ -41,9 +41,12 @@
                          :rowData="rowData"
                          :sideBar="sideBar"
 
-                         :enableColResize="true"
-                         :enableSorting="true"
-                         :enableFilter="true"
+                         :defaultColDef="{
+                            sortable: true,
+                            resizable: true,
+                            filter: true
+                         }"
+
                          :groupHeaders="true"
                          :suppressRowClickSelection="true"
                          rowSelection="multiple"
@@ -129,7 +132,7 @@
             createColumnDefs() {
                 this.columnDefs = [
                     {
-                        headerName: '#', width: 30, checkboxSelection: true, suppressSorting: true,
+                        headerName: '#', width: 30, checkboxSelection: true, sortable: false,
                         suppressMenu: true, pinned: true
                     },
                     {
@@ -166,7 +169,7 @@
                             {
                                 headerName: "Skills",
                                 width: 125,
-                                suppressSorting: true,
+                                sortable: false,
                                 cellRenderer: skillsCellRenderer,
                                 filter: 'SkillFilter'
                             },
