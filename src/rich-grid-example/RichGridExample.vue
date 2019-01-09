@@ -97,8 +97,7 @@
             }
         },
         components: {
-            AgGridVue,
-            SkillFilter
+            AgGridVue
         },
         methods: {
             createRowData() {
@@ -171,7 +170,7 @@
                                 width: 125,
                                 sortable: false,
                                 cellRenderer: skillsCellRenderer,
-                                filter: 'SkillFilter'
+                                filter: SkillFilter
                             },
                             {
                                 headerName: "Proficiency",
