@@ -2,7 +2,6 @@ import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
 import "../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from './App.vue';
