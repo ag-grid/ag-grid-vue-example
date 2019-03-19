@@ -12,14 +12,14 @@
     "ag-grid-enterprise": "^20.0.0",
     "ag-grid-vue": "^20.0.0",
     "bootstrap": "3.4.1",
-    "vue": "2.6.6",
-    "vue-property-decorator": "7.3.0",
+    "vue": "2.6.9",
+    "vue-property-decorator": "8.0.0",
     "vue-router": "3.0.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "3.4.1",
-    "@vue/cli-service": "3.4.1",
-    "vue-template-compiler": "2.6.6"
+    "@vue/cli-plugin-babel": "3.5.1",
+    "@vue/cli-service": "3.5.1",
+    "vue-template-compiler": "2.6.9"
   },
   "browserslist": [
     "> 1%",
