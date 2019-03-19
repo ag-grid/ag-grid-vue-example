@@ -8,9 +8,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "ag-grid-community": "^20.1.0",
-    "ag-grid-enterprise": "^20.1.0",
-    "ag-grid-vue": "^20.1.0",
+    "ag-grid-community": "^20.0.0",
+    "ag-grid-enterprise": "^20.0.0",
+    "ag-grid-vue": "^20.0.0",
     "bootstrap": "3.4.1",
     "vue": "2.6.6",
     "vue-property-decorator": "7.3.0",
