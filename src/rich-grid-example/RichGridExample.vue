@@ -171,7 +171,7 @@
                                 width: 125,
                                 sortable: false,
                                 cellRenderer: skillsCellRenderer,
-                                filter: 'SkillFilter'
+                                filter: SkillFilter
                             },
                             {
                                 headerName: "Proficiency",
