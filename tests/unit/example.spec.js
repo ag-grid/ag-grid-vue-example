@@ -12,7 +12,7 @@ const ensureGridApiHasBeenSet = vm => new Promise(function (resolve, reject) {
         }
 
         // not set - wait a bit longer
-        setTimeout(waitForGridReady, 10);
+        setTimeout(waitForGridReady, 20);
     })();
 });
 
