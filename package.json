@@ -1,25 +1,31 @@
 {
   "name": "ag-grid-vue-example",
-  "version": "20.2.0",
+  "version": "21.0.0",
   "private": true,
   "scripts": {
     "start": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test:unit",
+    "test:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit"
   },
   "dependencies": {
-    "ag-grid-community": "^20.2.0",
-    "ag-grid-enterprise": "^20.2.0",
-    "ag-grid-vue": "^20.2.0",
+    "ag-grid-community": "^21.0.0",
+    "ag-grid-enterprise": "^21.0.0",
+    "ag-grid-vue": "^21.0.0",
     "bootstrap": "3.4.1",
-    "vue": "2.6.9",
-    "vue-property-decorator": "8.0.0",
-    "vue-router": "3.0.2"
+    "vue": "2.6.10",
+    "vue-property-decorator": "8.1.1",
+    "vue-router": "3.0.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "3.5.1",
-    "@vue/cli-service": "3.5.1",
-    "vue-template-compiler": "2.6.9"
+    "@vue/cli-plugin-babel": "3.7.0",
+    "@vue/cli-service": "3.7.0",
+    "vue-template-compiler": "2.6.10",
+    "@vue/cli-plugin-unit-jest": "3.7.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0"
   },
   "browserslist": [
     "> 1%",
