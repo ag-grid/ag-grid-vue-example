@@ -7,8 +7,9 @@ import VueRouter from "vue-router";
 import App from './App.vue';
 import routes from './routes';
 
+import "@ag-community/client-side-row-model";
+
 // only needed if you use ag-grid enterprise features
-import "ag-grid-community/clientSideRowModelModule";
 import "ag-grid-enterprise";
 // import {LicenseManager} from "ag-grid-enterprise";
 // LicenseManager.setLicenseKey("your license key");

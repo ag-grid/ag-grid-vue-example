@@ -10,6 +10,7 @@
     "test:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit"
   },
   "dependencies": {
+    "@ag-community/client-side-row-model": "^21.2.0",
     "ag-grid-community": "^21.0.0",
     "ag-grid-enterprise": "^21.0.0",
     "ag-grid-vue": "^21.0.0",

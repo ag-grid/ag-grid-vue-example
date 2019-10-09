@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import "ag-grid-community/clientSideRowModelModule"
+    import '@ag-community/client-side-row-model';
     import {AgGridVue} from "ag-grid-vue";
     import Renderer from './Renderer.vue';
     import Editor from './Editor.vue';
