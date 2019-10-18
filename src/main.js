@@ -1,16 +1,20 @@
-import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
-import "../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css";
+import "../node_modules/@ag-community/grid-core/dist/styles/ag-grid.css";
+import "../node_modules/@ag-community/grid-core/dist/styles/ag-theme-balham.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+import '@ag-community/client-side-row-model'
+import '@ag-community/infinite-row-model'
+import '@ag-community/csv-export'
 
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from './App.vue';
 import routes from './routes';
 
-import "@ag-community/client-side-row-model";
+// import "@ag-community/client-side-row-model";
 
 // only needed if you use ag-grid enterprise features
-import "ag-grid-enterprise";
+// import "ag-grid-enterprise";
 // import {LicenseManager} from "ag-grid-enterprise";
 // LicenseManager.setLicenseKey("your license key");
 
