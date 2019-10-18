@@ -3,20 +3,27 @@
         <h1>Large Data Set Component (50,000 rows)</h1>
         <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-balham"
                      :rowData="rowData"
-                     :columnDefs="columnDefs">
+                     :columnDefs="columnDefs"
+                     :modules="modules">
         </ag-grid-vue>
     </div>
 </template>
 
 <script>
     import {AgGridVue} from "ag-grid-vue";
+    // for community features
+    import {AllModules} from "@ag-community/grid-all-modules";
+
+    // for enterprise features
+    // import {AllModules} from "@ag-enterprise/grid-all-modules";
 
     export default {
         name: "LargeDataSetExample",
         data() {
             return {
                 rowData: this.rowData,
-                columnDefs: this.columnDefs
+                columnDefs: this.columnDefs,
+                modules: AllModules
             }
         },
         components: {

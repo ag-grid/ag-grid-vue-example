@@ -11,10 +11,8 @@
   },
   "dependencies": {
     "@ag-community/grid-core": "^21.0.0",
-    "@ag-community/client-side-row-model": "^21.0.0",
-    "@ag-community/infinite-row-model": "^21.0.0",
-    "@ag-community/csv-export": "^21.0.0",
-    "ag-grid-enterprise": "^21.0.0",
+    "@ag-community/grid-all-modules": "^21.0.0",
+    "@ag-enterprise/grid-all-modules": "^21.0.0",
     "ag-grid-vue": "^21.0.0",
     "bootstrap": "3.4.1",
     "vue": "2.6.10",

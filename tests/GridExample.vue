@@ -3,12 +3,13 @@
                  class="ag-theme-balham"
                  @grid-ready="onGridReady"
                  :columnDefs="columnDefs"
-                 :rowData="rowData">
+                 :rowData="rowData"
+                 :modules="modules">
     </ag-grid-vue>
 </template>
 
 <script>
-    import '@ag-community/client-side-row-model';
+    import {AllModules} from "@ag-community/grid-all-modules";
     import {AgGridVue} from "ag-grid-vue";
     import Renderer from './Renderer.vue';
     import Editor from './Editor.vue';
@@ -19,7 +20,8 @@
             return {
                 columnDefs: null,
                 rowData: null,
-                api: null
+                api: null,
+                modules: AllModules
             }
         },
         components: {
