@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import {AllModules} from "@ag-community/grid-all-modules";
+    import {AllCommunityModules} from "@ag-community/grid-all-modules";
     import {AgGridVue} from "ag-grid-vue";
     import Renderer from './Renderer.vue';
     import Editor from './Editor.vue';
@@ -21,7 +21,7 @@
                 columnDefs: null,
                 rowData: null,
                 api: null,
-                modules: AllModules
+                modules: AllCommunityModules
             }
         },
         components: {

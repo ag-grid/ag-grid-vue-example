@@ -81,7 +81,7 @@
     import {AgGridVue} from "ag-grid-vue";
 
     // for community features
-    // import {AllModules} from "@ag-community/grid-all-modules";
+    // import {AllCommunityModules} from "@ag-community/grid-all-modules";
 
     // for enterprise features
     import {AllModules} from "@ag-enterprise/grid-all-modules";
