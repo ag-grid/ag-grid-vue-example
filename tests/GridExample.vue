@@ -10,7 +10,7 @@
 
 <script>
     import {AllCommunityModules} from "@ag-community/grid-all-modules";
-    import {AgGridVue} from "ag-grid-vue";
+    import {AgGridVue} from "@ag-community/grid-vue";
     import Renderer from './Renderer.vue';
     import Editor from './Editor.vue';
 

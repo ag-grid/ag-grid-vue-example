@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import {AgGridVue} from "ag-grid-vue";
+    import {AgGridVue} from "@ag-community/grid-vue";
     // for community features
     import {AllCommunityModules} from "@ag-community/grid-all-modules";
 

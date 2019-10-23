@@ -16,7 +16,7 @@
     "@ag-community/grid-client-side-row-model": "^21.0.0",
     "@ag-community/grid-csv-export": "^21.0.0",
     "@ag-community/grid-infinite-row-model": "^21.0.0",
-    "ag-grid-vue": "^21.0.0",
+    "@ag-community/grid-vue": "~21.2.0",
     "bootstrap": "3.4.1",
     "vue": "2.6.10",
     "vue-property-decorator": "^7.2.0",
