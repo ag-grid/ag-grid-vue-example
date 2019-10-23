@@ -2,9 +2,9 @@ import "../node_modules/@ag-community/grid-core/dist/styles/ag-grid.css";
 import "../node_modules/@ag-community/grid-core/dist/styles/ag-theme-balham.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-import '@ag-community/client-side-row-model'
-import '@ag-community/infinite-row-model'
-import '@ag-community/csv-export'
+import '@ag-community/grid-client-side-row-model'
+import '@ag-community/grid-infinite-row-model'
+import '@ag-community/grid-csv-export'
 
 import Vue from "vue";
 import VueRouter from "vue-router";
