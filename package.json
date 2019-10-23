@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-vue-example",
-  "version": "21.0.0",
+  "version": "22.0.0",
   "private": true,
   "scripts": {
     "start": "npm run serve",
@@ -16,7 +16,7 @@
     "@ag-community/grid-client-side-row-model": "^21.0.0",
     "@ag-community/grid-csv-export": "^21.0.0",
     "@ag-community/grid-infinite-row-model": "^21.0.0",
-    "ag-grid-vue": "^21.0.0",
+    "ag-grid-vue": "~22.0.0",
     "bootstrap": "3.4.1",
     "vue": "2.6.10",
     "vue-property-decorator": "^7.2.0",
