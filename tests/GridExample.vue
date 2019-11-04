@@ -9,8 +9,8 @@
 </template>
 
 <script>
-    import {AllCommunityModules} from "@ag-community/grid-all-modules";
-    import {AgGridVue} from "@ag-community/grid-vue";
+    import {AllCommunityModules} from "@ag-grid-community/grid-all-modules";
+    import {AgGridVue} from "@ag-grid-community/grid-vue";
     import Renderer from './Renderer.vue';
     import Editor from './Editor.vue';
 

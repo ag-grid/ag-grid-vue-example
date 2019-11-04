@@ -10,12 +10,12 @@
 </template>
 
 <script>
-    import {AgGridVue} from "@ag-community/grid-vue";
+    import {AgGridVue} from "@ag-grid-community/grid-vue";
     // for community features
-    import {AllCommunityModules} from "@ag-community/grid-all-modules";
+    import {AllCommunityModules} from "@ag-grid-community/grid-all-modules";
 
     // for enterprise features
-    // import {AllModules} from "@ag-enterprise/grid-all-modules";
+    // import {AllModules} from "@ag-grid-enterprise/grid-all-modules";
 
     export default {
         name: "LargeDataSetExample",
