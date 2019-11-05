@@ -1,10 +1,10 @@
-import "../node_modules/@ag-grid-community/grid-core/dist/styles/ag-grid.css";
-import "../node_modules/@ag-grid-community/grid-core/dist/styles/ag-theme-balham.css";
+import "../node_modules/@ag-grid-community/core/dist/styles/ag-grid.css";
+import "../node_modules/@ag-grid-community/core/dist/styles/ag-theme-balham.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-import '@ag-grid-community/grid-client-side-row-model'
-import '@ag-grid-community/grid-infinite-row-model'
-import '@ag-grid-community/grid-csv-export'
+import '@ag-grid-community/client-side-row-model'
+import '@ag-grid-community/infinite-row-model'
+import '@ag-grid-community/csv-export'
 
 import Vue from "vue";
 import VueRouter from "vue-router";
