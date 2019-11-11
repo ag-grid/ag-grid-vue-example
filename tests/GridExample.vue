@@ -3,12 +3,14 @@
                  class="ag-theme-balham"
                  @grid-ready="onGridReady"
                  :columnDefs="columnDefs"
-                 :rowData="rowData">
+                 :rowData="rowData"
+                 :modules="modules">
     </ag-grid-vue>
 </template>
 
 <script>
-    import {AgGridVue} from "ag-grid-vue";
+    import {AllCommunityModules} from "@ag-grid-community/all-modules";
+    import {AgGridVue} from "@ag-grid-community/vue";
     import Renderer from './Renderer.vue';
     import Editor from './Editor.vue';
 
@@ -18,7 +20,8 @@
             return {
                 columnDefs: null,
                 rowData: null,
-                api: null
+                api: null,
+                modules: AllCommunityModules
             }
         },
         components: {
