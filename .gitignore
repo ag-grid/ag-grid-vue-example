@@ -4,3 +4,4 @@ dist/
 npm-debug.log
 .DS_Store
 package-lock.json
+*.nosync
