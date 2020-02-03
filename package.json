@@ -17,7 +17,7 @@
     "@ag-grid-community/infinite-row-model": "~22.1.1",
     "@ag-grid-community/vue": "~22.1.1",
     "@ag-grid-enterprise/all-modules": "~22.1.1",
-    "bootstrap": "3.4.1",
+    "bootstrap": "4.4.1",
     "vue": "2.6.10",
     "vue-property-decorator": "^7.2.0",
     "vue-router": "3.0.6"
