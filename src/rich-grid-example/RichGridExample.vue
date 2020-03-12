@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 760px;">
+    <div class="d-flex flex-column w-100 flex-grow-1 flex-shrink-1">
         <div style="padding: 4px;">
             <div style="float: right;">
                 <input @keyup="onQuickFilterChanged" type="text" id="quickFilterInput"
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div style="clear: both;"></div>
-        <div v-if="showGrid">
+        <div v-if="showGrid" class="d-flex flex-column flex-grow-1 flex-shrink-1">
             <div style="padding: 4px;" class="toolbar">
             <span>
                 Grid API:
@@ -34,8 +34,7 @@
                 </label>
                 <button @click="createRowData()">Refresh Data</button>
             </div>
-            <div style="clear: both;"></div>
-            <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-balham"
+            <ag-grid-vue style="width: 100%;" class="flex-grow-1 flex-shrink-1 ag-theme-alpine"
                          :gridOptions="gridOptions"
                          :columnDefs="columnDefs"
                          :rowData="rowData"
@@ -140,7 +139,7 @@
             createColumnDefs() {
                 this.columnDefs = [
                     {
-                        headerName: '#', width: 30, checkboxSelection: true, sortable: false,
+                        headerName: '#', minWidth: 60, width: 60, checkboxSelection: true, sortable: false,
                         suppressMenu: true, pinned: true
                     },
                     {
