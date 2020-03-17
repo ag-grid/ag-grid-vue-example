@@ -1,11 +1,11 @@
 <template>
-    <div style="width: 760px;">
+    <div class="d-flex flex-column w-100 flex-grow-1 flex-shrink-1">
         <div style="padding: 4px;">
-            <div style="float: right;">
-                <input @keyup="onQuickFilterChanged" type="text" id="quickFilterInput"
+            <div style="float: right;" class="d-flex">
+                <input class="mr-2 form-control d-inline-block" @keyup="onQuickFilterChanged" type="text" id="quickFilterInput"
                        placeholder="Type text to filter..."/>
-                <button :disabled="!showGrid" @click="showGrid=false">Destroy Grid</button>
-                <button :disabled="showGrid" @click="showGrid=true">Create Grid</button>
+                <button class="btn btn-primary mr-2" :disabled="!showGrid" @click="showGrid=false" style="white-space: nowrap;">Destroy Grid</button>
+                <button class="btn btn-primary" :disabled="showGrid" @click="showGrid=true" style="white-space: nowrap;">Create Grid</button>
             </div>
             <div>
                 <b>Employees Skills and Contact Details</b>
@@ -13,29 +13,27 @@
             </div>
         </div>
         <div style="clear: both;"></div>
-        <div v-if="showGrid">
-            <div style="padding: 4px;" class="toolbar">
+        <div v-if="showGrid" class="d-flex flex-column flex-grow-1 flex-shrink-1">
+            <div style="padding: 4px;" class="btn-toolbar">
             <span>
                 Grid API:
-                <button @click="gridOptions.api.selectAll()">Select All</button>
-                <button @click="gridOptions.api.deselectAll()">Clear Selection</button>
+                <button class="btn btn-primary mx-1" @click="gridOptions.api.selectAll()">Select All</button>
+                <button class="btn btn-primary mx-1" @click="gridOptions.api.deselectAll()">Clear Selection</button>
             </span>
                 <span style="margin-left: 20px;">
                 Column API:
-                <button @click="gridOptions.columnApi.setColumnVisible('country', false)">Hide Country Column</button>
-                <button @click="gridOptions.columnApi.setColumnVisible('country', true)">Show Country Column</button>
+                <button class="btn btn-primary mx-1" @click="gridOptions.columnApi.setColumnVisible('country', false)">Hide Country Column</button>
+                <button class="btn btn-primary mx-1" @click="gridOptions.columnApi.setColumnVisible('country', true)">Show Country Column</button>
             </span>
             </div>
-            <div style="clear: both;"></div>
-            <div style="padding: 4px;" class="toolbar">
-                <label>
+            <div class="btn-toolbar d-flex align-items-center py-2">
+                <label class="m-0">
                     <input type="checkbox" v-model="sideBar"/>
                     Show Side Bar
                 </label>
-                <button @click="createRowData()">Refresh Data</button>
+                <button class="btn btn-primary mx-1" @click="createRowData()">Refresh Data</button>
             </div>
-            <div style="clear: both;"></div>
-            <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-balham"
+            <ag-grid-vue style="width: 100%;" class="flex-grow-1 flex-shrink-1 ag-theme-alpine"
                          :gridOptions="gridOptions"
                          :columnDefs="columnDefs"
                          :rowData="rowData"
@@ -139,7 +137,7 @@
             createColumnDefs() {
                 this.columnDefs = [
                     {
-                        headerName: '#', width: 30, checkboxSelection: true, sortable: false,
+                        headerName: '#', minWidth: 60, width: 60, checkboxSelection: true, sortable: false,
                         suppressMenu: true, pinned: true
                     },
                     {
