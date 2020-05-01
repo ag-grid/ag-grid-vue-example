@@ -1,40 +1,40 @@
 {
-	"name": "ag-grid-vue-example",
-	"version": "23.0.0",
-	"private": true,
-	"scripts": {
-		"start": "npm run serve",
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"test": "vue-cli-service test:unit --env=jest-environment-jsdom-fourteen",
-		"test:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit"
-	},
-	"dependencies": {
-		"@ag-grid-community/all-modules": "~23.0.0",
-		"@ag-grid-community/client-side-row-model": "~23.0.0",
-		"@ag-grid-community/core": "~23.0.0",
-		"@ag-grid-community/csv-export": "~23.0.0",
-		"@ag-grid-community/infinite-row-model": "~23.0.0",
-		"@ag-grid-community/vue": "~23.0.0",
-		"@ag-grid-enterprise/all-modules": "~23.0.0",
-		"bootstrap": "4.4.1",
-		"vue": "2.6.10",
-		"vue-property-decorator": "^7.2.0",
-		"vue-router": "3.0.6"
-	},
-	"devDependencies": {
-		"@vue/cli-plugin-babel": "3.7.0",
-		"@vue/cli-plugin-unit-jest": "3.7.0",
-		"@vue/cli-service": "3.7.0",
-		"@vue/test-utils": "1.0.0-beta.29",
-		"babel-core": "7.0.0-bridge.0",
-		"babel-jest": "^23.6.0",
-		"jest-environment-jsdom-fourteen": "1.0.0-alpha.0",
-		"vue-template-compiler": "2.6.10"
-	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions",
-		"not ie <= 8"
-	]
+  "name": "ag-grid-vue-example",
+  "version": "23.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test:unit --env=jest-environment-jsdom-fourteen",
+    "test:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit"
+  },
+  "dependencies": {
+    "@ag-grid-community/all-modules": "~23.1.0",
+    "@ag-grid-community/client-side-row-model": "~23.1.0",
+    "@ag-grid-community/core": "~23.1.0",
+    "@ag-grid-community/csv-export": "~23.1.0",
+    "@ag-grid-community/infinite-row-model": "~23.1.0",
+    "@ag-grid-community/vue": "~23.1.0",
+    "@ag-grid-enterprise/all-modules": "~23.1.0",
+    "bootstrap": "4.4.1",
+    "vue": "2.6.10",
+    "vue-property-decorator": "^7.2.0",
+    "vue-router": "3.0.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "3.7.0",
+    "@vue/cli-plugin-unit-jest": "3.7.0",
+    "@vue/cli-service": "3.7.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "jest-environment-jsdom-fourteen": "1.0.0-alpha.0",
+    "vue-template-compiler": "2.6.10"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
