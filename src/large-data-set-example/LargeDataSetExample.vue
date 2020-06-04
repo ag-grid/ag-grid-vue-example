@@ -1,10 +1,11 @@
 <template>
-    <div style="width: 760px;">
+    <div style="width: 100%;">
         <h1>Large Data Set Component (50,000 rows)</h1>
-        <ag-grid-vue style="width: 100%; height: 350px;" class="ag-theme-alpine"
+        <ag-grid-vue style="width: 100%; height: 650px;" class="ag-theme-alpine"
                      :rowData="rowData"
                      :columnDefs="columnDefs"
-                     :modules="modules">
+                     :modules="modules"
+                     @grid-ready="onReady">
         </ag-grid-vue>
     </div>
 </template>
@@ -57,6 +58,11 @@
                 {headerName: 'Value 6', field: 'value4'},
                 {headerName: 'Value 7', field: 'value4'}
             ])
+        },
+        methods: {
+            onReady(params) {
+                params.api.sizeColumnsToFit();
+            }
         }
     }
 </script>
