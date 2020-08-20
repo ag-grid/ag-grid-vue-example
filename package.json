@@ -19,19 +19,19 @@
     "@ag-grid-community/vue": "~23.2.0",
     "@ag-grid-enterprise/all-modules": "~23.2.0",
     "bootstrap": "4.5.0",
-    "vue": "2.6.11",
-    "vue-property-decorator": "8.4.2",
-    "vue-router": "3.3.2"
+    "vue": "2.6.12",
+    "vue-property-decorator": "9.0.0",
+    "vue-router": "3.4.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.4.1",
-    "@vue/cli-plugin-unit-jest": "4.4.1",
-    "@vue/cli-service": "4.4.1",
-    "@vue/test-utils": "1.0.3",
+    "@vue/cli-plugin-babel": "4.5.4",
+    "@vue/cli-plugin-unit-jest": "4.5.4",
+    "@vue/cli-service": "4.5.4",
+    "@vue/test-utils": "1.0.4",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "26.0.1",
+    "babel-jest": "26.3.0",
     "jest-environment-jsdom-fourteen": "1.0.1",
-    "vue-template-compiler": "2.6.11"
+    "vue-template-compiler": "2.6.12"
   },
   "browserslist": [
     "> 1%",
