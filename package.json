@@ -19,19 +19,34 @@
     "@ag-grid-community/vue": "~24.0.0",
     "@ag-grid-enterprise/all-modules": "~24.0.0",
     "bootstrap": "4.5.0",
-    "vue": "2.6.12",
+    "vue": "3.0.0",
     "vue-property-decorator": "9.0.0",
-    "vue-router": "3.4.3"
+    "vue-router": "4.0.0-beta.12",
+    "core-js": "^3.6.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.4",
-    "@vue/cli-plugin-unit-jest": "4.5.4",
-    "@vue/cli-service": "4.5.4",
-    "@vue/test-utils": "1.0.4",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "26.3.0",
-    "jest-environment-jsdom-fourteen": "1.0.1",
-    "vue-template-compiler": "2.6.12"
+    "vue-class-component": "8.0.0-beta.3",
+    "@vue/cli-plugin-babel": "4.5.6",
+    "@vue/cli-plugin-eslint": "4.5.6",
+    "@vue/cli-service": "4.5.6",
+    "@vue/compiler-sfc": "3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
   },
   "browserslist": [
     "> 1%",

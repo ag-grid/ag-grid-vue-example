@@ -33,7 +33,8 @@
                 </label>
                 <button class="btn btn-primary mx-1" @click="createRowData()">Refresh Data</button>
             </div>
-            <ag-grid-vue style="width: 100%;" class="flex-grow-1 flex-shrink-1 ag-theme-alpine"
+            xxx
+            <ag-grid-vue style="height: 500px; width: 100%;" class="flex-grow-1 flex-shrink-1 ag-theme-alpine"
                          :gridOptions="gridOptions"
                          :columnDefs="columnDefs"
                          :rowData="rowData"
@@ -71,6 +72,7 @@
                          @column-resized="onColumnEvent"
                          @column-pinned-count-changed="onColumnEvent">
             </ag-grid-vue>
+            yyy
         </div>
     </div>
 </template>
@@ -90,6 +92,8 @@
     import HeaderGroupComponent from './HeaderGroupComponent.vue';
     import RefData from './refData'
 
+    /* eslint-disable */
+
     export default {
         data() {
             return {
@@ -105,7 +109,9 @@
         },
         components: {
             AgGridVue,
-            SkillFilter
+            SkillFilter,
+            // HeaderGroupComponent,
+            // DateComponent
         },
         methods: {
             createRowData() {
