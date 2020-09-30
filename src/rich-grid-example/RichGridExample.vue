@@ -95,6 +95,7 @@ import {ProficiencyFilter} from './proficiencyFilter';
 import {SkillFilter} from './skillFilter';
 import DateComponent from './DateComponent.vue';
 import HeaderGroupComponent from './HeaderGroupComponent.vue';
+import CellComponent from './CellComponent.vue';
 import RefData from './refData'
 
 export default {
@@ -112,6 +113,8 @@ export default {
     },
     components: {
         AgGridVue,
+        // eslint-disable-next-line
+        CellComponent,
         // eslint-disable-next-line
         SkillFilter
     },
@@ -200,7 +203,7 @@ export default {
                 {
                     headerName: 'Contact',
                     children: [
-                        {headerName: "Mobile", field: "mobile", width: 150, filter: 'text'},
+                        {headerName: "Mobile", field: "mobile", width: 150, filter: 'text', cellRendererFramework: CellComponent},
                         {headerName: "Land-line", field: "landline", width: 150, filter: 'text'},
                         {headerName: "Address", field: "address", width: 500, filter: 'text'}
                     ]

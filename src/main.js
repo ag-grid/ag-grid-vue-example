@@ -7,7 +7,10 @@ import '@ag-grid-community/infinite-row-model';
 import '@ag-grid-community/csv-export';
 
 import {createApp} from 'vue';
+
+
 import App from './App.vue';
+import Router from './router';
 
 // import "@ag-grid-community/client-side-row-model";
 
@@ -17,7 +20,5 @@ import App from './App.vue';
 // LicenseManager.setLicenseKey("your license key");
 
 const app = createApp(App)
+app.use(Router);
 app.mount("#app")
-// new Vue({
-//     render: h => h(App)
-// }).$mount('#app');
