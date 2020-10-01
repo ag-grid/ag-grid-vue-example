@@ -85,9 +85,9 @@
 
 <script>
 import {AgGridVue} from "@ag-grid-community/vue";
-
 // for community features
 // import {AllCommunityModules} from "@ag-grid-community/all-modules";
+
 // for enterprise features
 import {AllModules} from "@ag-grid-enterprise/all-modules";
 
@@ -95,7 +95,8 @@ import {ProficiencyFilter} from './proficiencyFilter';
 import {SkillFilter} from './skillFilter';
 import DateComponent from './DateComponent.vue';
 import HeaderGroupComponent from './HeaderGroupComponent.vue';
-import CellComponent from './CellComponent.vue';
+import CellComponentRenderer from './CellComponentRenderer.vue';
+import CellComponentEditor from './CellComponentEditor.vue';
 import RefData from './refData'
 
 export default {
@@ -114,9 +115,13 @@ export default {
     components: {
         AgGridVue,
         // eslint-disable-next-line
-        CellComponent,
+        CellComponentRenderer,
         // eslint-disable-next-line
-        SkillFilter
+        CellComponentRenderer2: {
+            template: '<span>![[{{params.value}}]]</span>',
+        },
+        // eslint-disable-next-line
+        CellComponentEditor
     },
     methods: {
         createRowData() {
@@ -158,11 +163,11 @@ export default {
                     headerGroupComponentFramework: HeaderGroupComponent,
                     children: [
                         {
-                            headerName: "Name", field: "name",
-                            width: 150, pinned: true,
+                            headerName: "Name", field: "name", editable: true,
+                            width: 150, pinned: true, cellEditorFramework: 'CellComponentEditor'
                         },
                         {
-                            headerName: "Country", field: "country", width: 150,
+                            headerName: "Country", field:  "country", width: 150,
                             cellRenderer: countryCellRenderer, pinned: true,
                             filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}
                         },
@@ -203,8 +208,20 @@ export default {
                 {
                     headerName: 'Contact',
                     children: [
-                        {headerName: "Mobile", field: "mobile", width: 150, filter: 'text', cellRendererFramework: CellComponent},
-                        {headerName: "Land-line", field: "landline", width: 150, filter: 'text'},
+                        {
+                            headerName: "Mobile",
+                            field: "mobile",
+                            width: 150,
+                            filter: 'text',
+                            cellRendererFramework: 'CellComponentRenderer'
+                        },
+                        {
+                            headerName: "Land-line",
+                            field: "landline",
+                            width: 150,
+                            filter: 'text',
+                            cellRendererFramework: 'CellComponentRenderer2'
+                        },
                         {headerName: "Address", field: "address", width: 500, filter: 'text'}
                     ]
                 }
