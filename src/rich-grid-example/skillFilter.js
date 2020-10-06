@@ -82,6 +82,7 @@ export class SkillFilter {
         return undefined;
     }
 
+    // eslint-disable-next-line
     setModel(model) {
     }
 }
