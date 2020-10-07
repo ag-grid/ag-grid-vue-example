@@ -1,16 +1,3 @@
-<!--<template>
-    <RichGridExample></RichGridExample>
-</template>
-<script>
-import RichGridExample from "./rich-grid-example/RichGridExample";
-
-export default {
-    name: 'App',
-    components: {
-        RichGridExample
-    }
-}
-</script>-->
 <template>
     <div class="position-absolute d-flex flex-column h-100 w-100 p-2">
         <ul class="nav nav-pills" style="margin-bottom: 20px">

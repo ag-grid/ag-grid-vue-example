@@ -7,8 +7,6 @@ import '@ag-grid-community/infinite-row-model';
 import '@ag-grid-community/csv-export';
 
 import {createApp} from 'vue';
-
-
 import App from './App.vue';
 import Router from './router';
 
