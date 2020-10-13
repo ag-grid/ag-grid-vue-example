@@ -78,6 +78,7 @@ export class ProficiencyFilter {
         return undefined;
     }
 
+    // eslint-disable-next-line
     setModel(model) {
     }
 }
