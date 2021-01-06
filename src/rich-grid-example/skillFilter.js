@@ -6,7 +6,7 @@ const SKILL_TEMPLATE =
     '    <div style="text-align: center;">SKILL_NAME</div>' +
     '    <div>' +
     '      <input type="checkbox"/>' +
-    '      <img src="https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/images/skills/SKILL.png" width="30px"/>' +
+    '      <img src="https://www.ag-grid.com/example-assets/skills/SKILL.png" width="30px"/>' +
     '    </div>' +
     '  </span>' +
     '</label>';
@@ -37,14 +37,14 @@ export class SkillFilter {
 
         let that = this;
 
-        RefData.IT_SKILLS.forEach(function (skill, index) {
+        RefData.IT_SKILLS.forEach(function(skill, index) {
             let skillName = RefData.IT_SKILLS_NAMES[index];
             let eSpan = document.createElement('span');
             let html = SKILL_TEMPLATE.replace("SKILL_NAME", skillName).replace("SKILL", skill);
             eSpan.innerHTML = html;
 
             let eCheckbox = eSpan.querySelector('input');
-            eCheckbox.addEventListener('click', function () {
+            eCheckbox.addEventListener('click', function() {
                 that.model[skill] = eCheckbox.checked;
                 that.filterChangedCallback();
             });
@@ -61,7 +61,7 @@ export class SkillFilter {
         let model = this.model;
         let passed = true;
 
-        RefData.IT_SKILLS.forEach(function (skill) {
+        RefData.IT_SKILLS.forEach(function(skill) {
             if (model[skill]) {
                 if (!rowSkills[skill]) {
                     passed = false;
