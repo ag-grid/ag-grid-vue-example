@@ -1,4 +1,4 @@
-ag-Grid VueJS Component Examples
+AG Grid VueJS Component Examples
 ===================
 
 ## Build Setup
