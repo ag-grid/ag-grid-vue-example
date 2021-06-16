@@ -35,7 +35,7 @@ describe('GridExample.vue', () => {
         expect(cells.at(1).text()).toEqual('70000');
     });
 
-    it('cell should be editable and editor component usable', () => {
+    it('cell should be editable and editor component usable', (done) => {
         // wait for the api to be set before continuing
         const componentInstance = wrapper.vm;
 
@@ -54,11 +54,15 @@ describe('GridExample.vue', () => {
         // stop editing
         api.stopEditing();
 
-        // test the resulting values in the grid (the edited cell value should have changed)
-        const cells = wrapper.findAll('.ag-cell-value');
-        expect(cells.length).toEqual(2);
+        setTimeout(() => {
+            // test the resulting values in the grid (the edited cell value should have changed)
+            const cells = wrapper.findAll('.ag-cell-value');
+            expect(cells.length).toEqual(2);
 
-        expect(cells.at(0).text()).toEqual('Toyota');
-        expect(cells.at(1).text()).toEqual('200000');
+            expect(cells.at(0).text()).toEqual('Toyota');
+            expect(cells.at(1).text()).toEqual('200000');
+
+            done();
+        }, 100)
     });
 });
