@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-vue-example",
-  "version": "25.3.0",
+  "version": "26.0.0",
   "private": true,
   "scripts": {
     "start": "npm run serve",
@@ -11,13 +11,13 @@
     "test:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit"
   },
   "dependencies": {
-    "@ag-grid-community/all-modules": "~25.3.0",
-    "@ag-grid-community/client-side-row-model": "~25.3.0",
-    "@ag-grid-community/core": "~25.3.0",
-    "@ag-grid-community/csv-export": "~25.3.0",
-    "@ag-grid-community/infinite-row-model": "~25.3.0",
-    "@ag-grid-community/vue": "~25.3.0",
-    "@ag-grid-enterprise/all-modules": "~25.3.0",
+    "@ag-grid-community/all-modules": "~26.0.0",
+    "@ag-grid-community/client-side-row-model": "~26.0.0",
+    "@ag-grid-community/core": "~26.0.0",
+    "@ag-grid-community/csv-export": "~26.0.0",
+    "@ag-grid-community/infinite-row-model": "~26.0.0",
+    "@ag-grid-community/vue": "~26.0.0",
+    "@ag-grid-enterprise/all-modules": "~26.0.0",
     "bootstrap": "4.6.0",
     "vue": "2.6.12",
     "vue-property-decorator": "9.1.2",
