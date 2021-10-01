@@ -285,7 +285,7 @@
         },
         beforeMount() {
             this.gridOptions = {};
-            this.gridOptions.dateComponentFramework = DateComponent;
+            this.gridOptions.frameworkComponents = { agDateInput: DateComponent };
             this.createRowData();
             this.createColumnDefs();
             this.showGrid = true;
