@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build && npm run hash",
     "hash": "sh ./hashDirectory.sh > .hash",
-    "test": "vue-cli-service test:unit --env=jest-environment-jsdom-fourteen",
+    "testx": "vue-cli-service test:unit --env=jest-environment-jsdom-fourteen",
     "test:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit"
   },
   "dependencies": {
