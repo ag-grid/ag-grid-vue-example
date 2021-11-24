@@ -57,7 +57,6 @@ export default Vue.extend({
 .expanded {
   animation-name: toExpanded;
   animation-duration: 1s;
-  -ms-transform: rotate(180deg); /* IE 9 */
   -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
   transform: rotate(180deg);
 }
@@ -66,7 +65,6 @@ export default Vue.extend({
   color: cornflowerblue;
   animation-name: toCollapsed;
   animation-duration: 1s;
-  -ms-transform: rotate(0deg); /* IE 9 */
   -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
   transform: rotate(0deg);
 }
@@ -74,13 +72,11 @@ export default Vue.extend({
 @keyframes toExpanded {
   from {
     color: cornflowerblue;
-    -ms-transform: rotate(0deg); /* IE 9 */
     -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
     transform: rotate(0deg);
   }
   to {
     color: black;
-    -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
   }
@@ -89,13 +85,11 @@ export default Vue.extend({
 @keyframes toCollapsed {
   from {
     color: black;
-    -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
   }
   to {
     color: cornflowerblue;
-    -ms-transform: rotate(0deg); /* IE 9 */
     -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
     transform: rotate(0deg);
   }
