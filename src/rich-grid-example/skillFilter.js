@@ -37,14 +37,14 @@ export class SkillFilter {
 
         let that = this;
 
-        RefData.IT_SKILLS.forEach(function(skill, index) {
+        RefData.IT_SKILLS.forEach(function (skill, index) {
             let skillName = RefData.IT_SKILLS_NAMES[index];
             let eSpan = document.createElement('span');
             let html = SKILL_TEMPLATE.replace("SKILL_NAME", skillName).replace("SKILL", skill);
             eSpan.innerHTML = html;
 
             let eCheckbox = eSpan.querySelector('input');
-            eCheckbox.addEventListener('click', function() {
+            eCheckbox.addEventListener('click', function () {
                 that.model[skill] = eCheckbox.checked;
                 that.filterChangedCallback();
             });
@@ -61,7 +61,7 @@ export class SkillFilter {
         let model = this.model;
         let passed = true;
 
-        RefData.IT_SKILLS.forEach(function(skill) {
+        RefData.IT_SKILLS.forEach(function (skill) {
             if (model[skill]) {
                 if (!rowSkills[skill]) {
                     passed = false;

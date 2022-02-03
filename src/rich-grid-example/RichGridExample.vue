@@ -77,10 +77,6 @@
 
 <script>
     import {AgGridVue} from "@ag-grid-community/vue";
-
-    // for community features
-    // import {AllCommunityModules} from "@ag-grid-community/all-modules";
-
     // for enterprise features
     import {AllModules} from "@ag-grid-enterprise/all-modules";
 
@@ -89,6 +85,9 @@
     import DateComponent from './DateComponent.vue';
     import HeaderGroupComponent from './HeaderGroupComponent.vue';
     import RefData from './refData'
+
+    // for community features
+    // import {AllCommunityModules} from "@ag-grid-community/all-modules";
 
     export default {
         data() {
@@ -105,7 +104,9 @@
         },
         components: {
             AgGridVue,
-            SkillFilter
+            SkillFilter,
+            HeaderGroupComponent,
+            agDateInput: DateComponent
         },
         methods: {
             createRowData() {
@@ -144,7 +145,7 @@
                     },
                     {
                         headerName: 'Employee',
-                        headerGroupComponent: HeaderGroupComponent,
+                        headerGroupComponent: 'HeaderGroupComponent',
                         children: [
                             {
                                 headerName: "Name", field: "name",
@@ -285,7 +286,6 @@
         },
         beforeMount() {
             this.gridOptions = {};
-            this.gridOptions.frameworkComponents = { agDateInput: DateComponent };
             this.createRowData();
             this.createColumnDefs();
             this.showGrid = true;
