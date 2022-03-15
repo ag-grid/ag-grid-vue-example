@@ -9,5 +9,5 @@ export default [
         },
         name: 'Rich Grid with Pure JavaScript'
     },
-    { path: '/large-data', component: LargeDataSetExample, name: 'Large Data Example' }
+    {path: '/large-data', component: LargeDataSetExample, name: 'Large Data Example'}
 ];

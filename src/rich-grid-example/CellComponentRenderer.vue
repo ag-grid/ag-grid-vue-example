@@ -3,12 +3,11 @@
 </template>
 
 <script>
-export default {
-};
+    export default {};
 </script>
 
 <style scoped>
-.cell {
-    color: blue;
-}
+    .cell {
+        color: blue;
+    }
 </style>
