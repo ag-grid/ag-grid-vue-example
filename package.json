@@ -17,7 +17,7 @@
     "@ag-grid-community/csv-export": "~27.3.0",
     "@ag-grid-community/infinite-row-model": "~27.3.0",
     "@ag-grid-community/vue": "~27.3.0",
-    "@ag-grid-community/client-side-row-model": "~27.3.0",
+    "@ag-grid-community/styles": "~27.3.0",
     "@ag-grid-enterprise/charts": "~27.3.0",
     "@ag-grid-enterprise/clipboard": "~27.3.0",
     "@ag-grid-enterprise/column-tool-panel": "~27.3.0",
