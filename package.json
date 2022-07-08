@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-vue-example",
-  "version": "28.0.0",
+  "version": "28.0.1",
   "private": true,
   "scripts": {
     "start": "npm run serve",
