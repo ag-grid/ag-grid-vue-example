@@ -1,5 +1,5 @@
-import '../node_modules/@ag-grid-community/core/dist/styles/ag-grid.css';
-import '../node_modules/@ag-grid-community/core/dist/styles/ag-theme-alpine.css';
+import '../node_modules/@ag-grid-community/styles/ag-grid.css';
+import '../node_modules/@ag-grid-community/styles/ag-theme-alpine.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import '@ag-grid-community/client-side-row-model';

@@ -1,5 +1,5 @@
 <template>
-    <span>{{this.params.value * 2}}</span>
+    <span>{{ this.params.value * 2 }}</span>
 </template>
 
 <script>
