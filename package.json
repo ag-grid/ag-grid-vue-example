@@ -11,8 +11,6 @@
     "testx": "vue-cli-service test:unit --env=jest-environment-jsdom-fourteen",
     "test:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit"
   },
-
-  resource change for solid examples
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "~28.1.0",
     "@ag-grid-community/core": "~28.1.0",
