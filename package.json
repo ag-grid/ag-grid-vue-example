@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run serve",
-    "serve": "vue-cli-service serve --host 0.0.0.0",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve --host 0.0.0.0",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build && npm run hash",
     "build-prod": "npm run build",
     "hash": "sh ./hashDirectory.sh > .hash",
