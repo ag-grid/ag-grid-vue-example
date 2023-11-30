@@ -22,8 +22,8 @@
             </span>
                 <span style="margin-left: 20px;">
                 Column API:
-                <button class="btn btn-primary mx-1" @click="gridOptions.columnApi.setColumnVisible('country', false)">Hide Country Column</button>
-                <button class="btn btn-primary mx-1" @click="gridOptions.columnApi.setColumnVisible('country', true)">Show Country Column</button>
+                <button class="btn btn-primary mx-1" @click="gridOptions.api.setColumnVisible('country', false)">Hide Country Column</button>
+                <button class="btn btn-primary mx-1" @click="gridOptions.api.setColumnVisible('country', true)">Show Country Column</button>
             </span>
             </div>
             <div class="btn-toolbar d-flex align-items-center py-2">
